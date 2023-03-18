@@ -34,6 +34,28 @@ Podes revisar las respuestas aqui:
 - [Proyecto Final](parte-1/project)
 
 
+## Desafios Parte 2
+
+En esta segunda parte, vemos que sucede detras al correr una query, cuales son los distintos tipos de materializaciones, windows functions, case statements con agregaciones y manejo de datos string and date. 
+
+En el proyecto final se exponene diferentes preguntas de negocio donde se tienen que elaborar KPIs para responderlas.
+
+Podes revisar las respuestas aqui: 
+- [Homework](parte-2/homework)
+- [Proyecto Final](parte-2/project)
+
+
+## Desafios Parte 3
+
+La ultima parte montamos un Data Warehouse y un Data Lake, generamos ambientes de produccion y testeo junto con una introduccion al modelo referencial. Por otro lado evaluamos el plan de ejecucion para entener como mejorar la performances de nuestras queries. 
+
+En el proyecto final se exponene diferentes preguntas de negocio donde se tienen que elaborar KPIs para responderlas.
+
+Podes revisar las respuestas aqui: 
+- [Homework](parte-3/homework)
+- [Proyecto Final](parte-3/project)
+
+
 ## Sobre nosotros 👋🏼
 
 [sqldeceroamessi](https://sqldeceroamessi.carrd.co/) es la plataforma de enseñanza cuyo objetivo es crear profesioanles de alta performance en el area de datos.

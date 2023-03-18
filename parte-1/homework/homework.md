@@ -24,14 +24,14 @@ Ambas respuestas van a ser consideradas validas.
 
 1. Mostrar todos los productos dentro de la categoria electro junto con todos los detalles. 
 2. Cuales son los producto producidos en China? 
-3. Mostrar todos los productos de Snacks ordenados por nombre. 
+3. Mostrar todos los productos de Electro ordenados por nombre. 
 4. Cuales son las TV que se encuentran activas para la venta?
 5. Mostrar todas las tiendas de Argentina ordenadas por fecha de apertura de las mas antigua a la mas nueva. 
 6. Cuales fueron las ultimas 5 ordenes de ventas? 
-7. Mostrar los primeros 10 registros de el conteo de trafico por Super store. 
+7. Mostrar los primeros 10 registros de el conteo de trafico por Super store ordenados por fecha. 
 8. Cuales son los producto de electro que no son Soporte de TV ni control remoto. 
-9. Mostrar todas las lineas de venta donde el monto sea mayor a $100.
-10. Mostrar todas las lineas de ventas del 2022.
+9. Mostrar todas las lineas de venta donde el monto sea mayor a $100.000 solo para transacciones en pesos.
+10. Mostrar todas las lineas de ventas de Octubre 2022.
 11. Mostrar todos los productos que tengan EAN.
 12. Mostrar todas las ordenes de ventas y productos que tengan montos entre $103 y $200
 

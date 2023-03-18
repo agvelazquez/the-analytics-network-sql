@@ -22,6 +22,18 @@
 Repositorio del curso de programacion en SQL: SQL de cero a Messi. El curso tiene una duracion de 18 clases desde un nivel basico con los primeras queries hasta un nivel avanzado donde se evaluan queries complejas, proyectos de modelado y optimizacion. Para mas detalles ver el Plan de Estudio en el root del repositorio.
 
 
+
+## Desafios Parte 1
+
+En la primera parte se recorre las sentencias basicas de SQL, agregaciones, case statement, introduccion a los distintos tipos de join y los tipos de relaciones, exposicion a valores nulos para finalizar con un recorrido de sentencias DDL y DML. 
+
+En el proyecto final se exponene diferentes preguntas de negocio donde se tienen que elaborar KPIs para responderlas.
+
+Podes revisar las respuestas aqui: 
+- [Homework](parte-1/homework)
+- [Proyecto Final](parte-1/project)
+
+
 ## Sobre nosotros 👋🏼
 
 [sqldeceroamessi](https://sqldeceroamessi.carrd.co/) es la plataforma de enseñanza cuyo objetivo es crear profesioanles de alta performance en el area de datos.

@@ -135,12 +135,12 @@ CREATE TABLE stg.order_line_sale
                             , producto   VARCHAR(10)
                             , tienda     SMALLINT
                             , fecha      VARCHAR(10)
-                            , cantidad   SMALLINT
-                            , venta      SMALLINT
-                            , descuento  SMALLINT
-                            , impuestos  SMALLINT
-                            , creditos   SMALLINT
-                            , moneda     SMALLINT
+                            , cantidad   int
+                            , venta      decimal(18,5)
+                            , descuento  decimal(18,5)
+                            , impuestos  decimal(18,5)
+                            , creditos   decimal(18,5)
+                            , moneda     varchar(3)
                             , pos        SMALLINT
                             , is_walkout BOOLEAN
                  );

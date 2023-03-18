@@ -33,16 +33,16 @@ Ambas respuestas van a ser consideradas validas.
 9. Mostrar todas las lineas de venta donde el monto sea mayor a $100.000 solo para transacciones en pesos.
 10. Mostrar todas las lineas de ventas de Octubre 2022.
 11. Mostrar todos los productos que tengan EAN.
-12. Mostrar todas las ordenes de ventas y productos que tengan montos entre $103 y $200
+12. Mostrar todas las lineas de venta que que hayan sido vendidas entre 1 de Octubre de 2022 y 10 de Noviembre de 2022.
 
 
 ## Clase 2
 
 1. Cuales son los paises donde la empresa tiene tiendas? 
 2. Cuantos productos por subcategoria tiene disponible para la venta? 
-3. Cuales son las ordenes de venta de mayor a $1500? 
-4. Obtener los decuentos otorgados por tienda durante Noviembre de 2022?
-5. Obtener los impuestos pagados en Chile durante el 2022. 
+3. Cuales son las ordenes de venta de Argentina de mayor a $100.000? 
+4. Obtener los decuentos otorgados durante Noviembre de 2022 en cada una de las monedas?
+5. Obtener los impuestos pagados en Europa durante el 2022. 
 6. En cuantas ordenes se utilizaron creditos? 
 7. Cual es el % de descuentos otorgados por tienda?
 8. Obtener las ventas netas, % de descuento por producto. 

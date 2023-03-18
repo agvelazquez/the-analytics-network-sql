@@ -44,9 +44,9 @@ Ambas respuestas van a ser consideradas validas.
 4. Obtener los decuentos otorgados durante Noviembre de 2022 en cada una de las monedas?
 5. Obtener los impuestos pagados en Europa durante el 2022. 
 6. En cuantas ordenes se utilizaron creditos? 
-7. Cual es el % de descuentos otorgados por tienda?
-8. Obtener las ventas netas, % de descuento por producto. 
-9. Obtener las entradas a tienda en un solo resultado.
+7. Cual es el % de descuentos otorgados (sobre las ventas) por tienda?
+8. Obtener las ventas netas y el porcentaje de descuento otorgado por producto en Argentina. 
+9. Las tablas "market_count" y "super_store_count" representan dos sistemas distintos que usa la empresa para contar la cantidad de gente que ingresa a tienda, uno para las tiendas de Latinoamerica y otro para Europa. Obtener en una unica tabla, las entradas a tienda de ambos sistemas. 
 10. Cuales son los productos disponibles de la marca Phillips? 
 11. Obtener el monto vendido por tienda y ordenarlo de mayor a menor. 
 12. Obtener el monto vendido por tienda, para las tiendas que vendieron mas $9000, ordenado de mayor a menor. 

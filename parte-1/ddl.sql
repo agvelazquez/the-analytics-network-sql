@@ -127,9 +127,9 @@ CREATE TABLE stg.super_store_count
 /* Crea tabla order_sales_units
 Ventas a nivel numero de orden, item.
 */
-DROP TABLE IF EXISTS stg.order_sale_line;
+DROP TABLE IF EXISTS stg.order_line_sale;
     
-CREATE TABLE stg.order_sale_line
+CREATE TABLE stg.order_line_sale
                  (
                               orden      VARCHAR(10)
                             , producto   VARCHAR(10)

@@ -60,6 +60,11 @@ Podes revisar las respuestas aqui:
 
 [sqldeceroamessi](https://sqldeceroamessi.carrd.co/) es la plataforma de enseñanza cuyo objetivo es crear profesioanles de alta performance en el area de datos.
 
+## Referencias 
+
+- [PostgreSQL Doc](https://www.postgresql.org/docs/current/functions.html)
+- [BigQuery Doc](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax?hl=es-419)
+
 ## License 🗞
 
 > Copyright © 2023 Agustin Velazquez

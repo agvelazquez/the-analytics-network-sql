@@ -23,7 +23,6 @@ Supply Chain
 - Costo de inventario promedio por tienda
 - Costo del stock de productos que no se vendieron por tienda
 - Cantidad y costo de devoluciones
-- Ventas brutas retornadas
 
 Tiendas
 - Ratio de conversion. Cantidad de ordenes generadas / Cantidad de gente que entra

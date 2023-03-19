@@ -77,11 +77,6 @@ CREATE TABLE stg.monthly_average_fx_rate
                  );
     
 
-/* Crea tabla returns
-Productos retornados por el cliente
-*/
-DROP TABLE IF EXISTS stg.returns;
-
 /* Crea tabla store_master
 Tabla maestra de tiendas 
 */

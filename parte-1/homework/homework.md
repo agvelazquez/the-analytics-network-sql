@@ -45,25 +45,27 @@ Ambas respuestas van a ser consideradas validas.
 5. Obtener los impuestos pagados en Europa durante el 2022. 
 6. En cuantas ordenes se utilizaron creditos? 
 7. Cual es el % de descuentos otorgados (sobre las ventas) por tienda?
-8. Obtener las ventas netas y el porcentaje de descuento otorgado por producto en Argentina. 
-9. Las tablas "market_count" y "super_store_count" representan dos sistemas distintos que usa la empresa para contar la cantidad de gente que ingresa a tienda, uno para las tiendas de Latinoamerica y otro para Europa. Obtener en una unica tabla, las entradas a tienda de ambos sistemas. 
-10. Cuales son los productos disponibles para la venta (activos) de la marca Phillips? 
-11. Obtener el monto vendido por tienda y moneda y ordenarlo de mayor a menor por valor nominal. 
-12. Cual es el precio promedio de venta de cada producto en las distintas monedas? Recorda que los valores de venta, impuesto, descuentos y creditos es por el total de la linea.
-13. Cual es la tasa de impuestos que se pago por cada orden de venta?
+8. Cual es el inventario promedio por dia que tiene cada tienda?
+9. Obtener las ventas netas y el porcentaje de descuento otorgado por producto en Argentina. 
+10. Las tablas "market_count" y "super_store_count" representan dos sistemas distintos que usa la empresa para contar la cantidad de gente que ingresa a tienda, uno para las tiendas de Latinoamerica y otro para Europa. Obtener en una unica tabla, las entradas a tienda de ambos sistemas. 
+11. Cuales son los productos disponibles para la venta (activos) de la marca Phillips? 
+12. Obtener el monto vendido por tienda y moneda y ordenarlo de mayor a menor por valor nominal. 
+13. Cual es el precio promedio de venta de cada producto en las distintas monedas? Recorda que los valores de venta, impuesto, descuentos y creditos es por el total de la linea.
+14. Cual es la tasa de impuestos que se pago por cada orden de venta?
 
 
 ## Clase 3
 
-1. Mostrar nombre y codigo de producto, categoria y color para todos los productos, mostrando la leyenda "Unknown" cuando no hay un color disponible.
-2. Calcular el ratio credito/promotion para cada linea de venta. 
-4. Mostrar los primero 100 resultados de la tabla ventas con una nueva columna llamada "line_key" resultado de la concatenacion entre orden y producto separado por guion medio. 
-5. Mostrar una vista donde sea vea el nombre de tienda y la cantidad de entradas de personas que hubo desde la fecha de apertura. 
-6. Mostrar la cantidad de unidades vendidas y el inventario promedio por cada dia y codigo de producto.
-7. Mostrar la tabla ventas_items agregando una columna que represente el valor de venta en cada linea convertido a dolares usando la tabla de tipo de cambio.
-8. Mostrar el margen de venta por cada orden de producto. Siendo margen = venta - costo. 
-9. Mostrar el inventario promedio por dia.
-10. Calcular cantidad de ventas totales por pais en dolares.
+1. Mostrar nombre y codigo de producto, categoria y color para todos los productos de la marca Philips y Samsung, mostrando la leyenda "Unknown" cuando no hay un color disponible
+2. Calcular las ventas brutas y los impuestos pagados por pais y provincia en la moneda correspondiente.
+3. Calcular las ventas totales por categoria de producto para cada moneda.
+4. Calcular las ventas netas totales por subcategoria de producto y la concatenacion de pais, provincia. 
+4. Mostrar una vista donde sea vea el nombre de tienda y la cantidad de entradas de personas que hubo desde la fecha de apertura. 
+6. Mostrar la cantidad de unidades vendidas y el inventario promedio por cada dia, codigo de producto y tienda.
+7. Mostrar la tabla order_line_sales agregando una columna que represente el valor de venta en cada linea convertido a dolares usando la tabla de tipo de cambio.
+8. Calcular cantidad de ventas totales de la empresa en dolares.
+9. Mostrar en la tabla de ventas el margen de venta por cada linea. Siendo margen = (venta - promociones) - costo expresado en dolares.
+
 
 
 ## Clase 4 

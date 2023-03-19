@@ -72,7 +72,7 @@ CREATE TABLE stg.monthly_average_fx_rate
                  (
                               mes                 DATE
                             , cotizacion_usd_peso DECIMAL
-                            , cotizacion_eur_peso DECIMAL
+                            , cotizacion_usd_eur DECIMAL
                             , cotizacion_usd_uru  DECIMAL
                  );
     
@@ -81,18 +81,7 @@ CREATE TABLE stg.monthly_average_fx_rate
 Productos retornados por el cliente
 */
 DROP TABLE IF EXISTS stg.returns;
-    
-CREATE TABLE stg.retornos
-                 (
-                            , orden_venta  VARCHAR(100)
-                            , envio        VARCHAR(100)
-                            , item         VARCHAR(100)
-                            , desde        DATE
-                            , hasta        DATE
-                            , recibido_por VARCHAR(100)
-                            , fecha        DATE
-                 );
-                 
+
 /* Crea tabla store_master
 Tabla maestra de tiendas 
 */

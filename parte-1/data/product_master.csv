@@ -1,0 +1,19 @@
+codigo_producto,nombre,categoria,subcategoria,subsubcategoria,material,color,origen,ean,is_active,has_bluetooth,talle
+p100014,"TV Samsung 42""",Electro,TV,TV,,negro,Argentina,8806090483585,TRUE,TRUE,
+p100023,Soporte TV,Electro,Accesorios,Soporte,Metal,Negro,Argentina,7798035045754,TRUE,,
+p100022,"Smart Tv Led PHILIPS 50"" 4K 50pud7406/77",Electro,TV,TV,,negro,Argentina,8718863029541,FALSE,TRUE,
+p100015,Control Remoto Universal ONE FOR ALL Urc1035,Electro,Accesorios,Control remoto,,blanco,China,8716184067730,TRUE,,
+p200010,Parlante Portátil JBL Charge 5 Negro 40 W,Electro,Audio,Parlante,,negro,China,,TRUE,TRUE,
+p200034,Barra De Sonido PHILIPS Tab5105/12 30 W,Electro,Audio,Barras de sonido,,,Argentina,4710886951186,TRUE,FALSE,
+p200087,"Portátil Gaming Acer Nitro 5 NH.QFJEB.001, i7, 16GB, 512GB SSD",Electro,Computadoras,Portatiles,,negro,China,7790310983997,TRUE,TRUE,
+p200088,Auriculares MOTOROLA Pulse Escape Xt220 Blanco,Electro,Audio,Auriculares,plastico,,China,5055374711248,TRUE,FALSE,
+p200089,Smartwatch SAMSUNG Galaxy Watch4 46mm,Electro,Informatica,Smartwatch,PLASTICO,negro,Vietnam,8806092519435,TRUE,TRUE,
+p300001,Levi's Camisa vaquera de hombre de manga larga azul,Moda,Hombre,Camisas,,Azul,China,,TRUE,,S
+p300002,Levi's Camisa vaquera de hombre de manga larga azul,Moda,Hombre,Camisas,,Azul,China,,TRUE,,M
+p300003,Levi's Camisa vaquera de hombre de manga larga azul,Moda,Hombre,Camisas,,Azul,China,,TRUE,,L
+p300004,Tommy Hilfiger Polo de hombre regular fit de manga corta,Moda,Hombre,Polo,,Azul Marino,China,,TRUE,,S
+p300005,Tommy Hilfiger Polo de hombre regular fit de manga corta,Moda,Hombre,Polo,,Azul Marino,China,,TRUE,,M
+p300006,Tommy Hilfiger Polo de hombre regular fit de manga corta,Moda,Hombre,Polo,,Azul Marino,China,,TRUE,,L
+p300007,Tommy Hilfiger Polo de hombre regular fit de manga corta,Moda,Hombre,Polo,,Rojo,China,,TRUE,,S
+p300008,Tommy Hilfiger Polo de hombre regular fit de manga corta,Moda,Hombre,Polo,,Rojo,China,,TRUE,,M
+p300009,Tommy Hilfiger Polo de hombre regular fit de manga corta,Moda,Hombre,Polo,,Rojo,China,,TRUE,,L

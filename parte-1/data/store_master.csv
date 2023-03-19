@@ -1,0 +1,8 @@
+codigo_tienda,pais,provincia,ciudad,direccion,nombre,tipo,fecha_apertura,latitud,longitud
+1,Argentina,Cordoba,Cordoba,Avenida Cordoba 234,Cordoba,Moda,2020-05-20,,
+2,Argentina,Buenos Aires,CABA,Avenida Corrientes 1999,CABA,Moda,2010-12-18,,
+3,Argentina,Buenos Aires,CABA,"Nicolas de Vedia 3626 esquina Melian - Dot Baires Shoping,CAPITAL FEDERAL,1430",DOT,Electrodomesticos,2011-01-11,,
+4,Uruguay,Maldonado,Punta del Este,Avenida del Este 899,Maldonado,Electrodomesticos,2018-08-09,,
+5,Argentina,Buenos Aires,CABA,Avenida de Mayo 199,CABA III,Electrodomesticos,,,
+8,España,Madrid,Madrid,"Calle de Raimundo Fernández Villaverde, 79 28003",Castellana,Moda,2021-08-09,,
+9,España,Madrid,Madrid,"C/ Goya, 76, 28009 ",Goya,Electrodomesticos,2021-07-09,,

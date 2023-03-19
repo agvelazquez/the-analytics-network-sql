@@ -27,7 +27,7 @@ Supply Chain
 Tiendas
 - Ratio de conversion. Cantidad de ordenes generadas / Cantidad de gente que entra
 
-Por otro lado tambien necesitamos crear y subir a nuestra DB la tabla "returns" para poder utilizarla en la segunda parte.
+Por otro lado tambien necesitamos crear y subir a nuestra DB la tabla "return_movements" para poder utilizarla en la segunda parte.
 
 ## Preguntas de entrevistas
 

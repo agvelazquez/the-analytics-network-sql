@@ -65,15 +65,22 @@ Ambas respuestas van a ser consideradas validas.
 7. Mostrar la tabla order_line_sales agregando una columna que represente el valor de venta en cada linea convertido a dolares usando la tabla de tipo de cambio.
 8. Calcular cantidad de ventas totales de la empresa en dolares.
 9. Mostrar en la tabla de ventas el margen de venta por cada linea. Siendo margen = (venta - promociones) - costo expresado en dolares.
+10. Calcular la cantidad de items distintos de cada subsubcategoria que se llevan por numero de orden.
 
 
 
 ## Clase 4 
-1. Hacer un update a la tabla de maestro de productos agregando la leyendo "N/A" para los valores null de material y color. 
-2. Agregar una nueva columna a la tabla de ventas llamada "line_key" calculada en la Clase 3.  
-3. Hacer un update al maestro de productos, columa "is_active", desactivando todos los productos en la subsubcategoria "Control Remoto". 
-4. Hacer un update a la tabla costos, poniendo en null todos los productos en la subcategoria TV.
-5. Eliminar todos los valores de la tabla ventas para el POS 9999.
-6. Crear un backup de la tabla de tiendas. 
-7. Crear una tabla llamada "empleados", por el momento vacia, que tenga un id (creado de forma incremental), nombre, apellido, fecha de entrada, fecha salida, telefono, documento identificacion, direccion, pais, provincia.
-8. Insertar un valor a la tabla "empleados" con datos inventados pero posibles y que cumplan las definiciones de tipo de dato pactadas en el esquema.
+1. Crear un backup de la tabla product_master. Utilizar un esquema llamada "bkp" y agregar un prefijo al nombre de la tabla con la fecha del backup en forma de numero entero.
+2. Hacer un update a la nueva tabla (creada en el punto anterior) de product_master agregando la leyendo "N/A" para los valores null de material y color. Pueden utilizarse dos sentencias.
+3. Hacer un update a la tabla del punto anterior, actualizando la columa "is_active", desactivando todos los productos en la subsubcategoria "Control Remoto". 
+4. Agregar una nueva columna a la tabla anterior llamada "is_local" indicando los productos producidos en Argentina y fuera de Argentina.
+5. Agregar una nueva columna a la tabla de ventas llamada "line_key" que resulte ser la concatenacion de el numero de orden y el codigo de producto.  
+6. Eliminar todos los valores de la tabla "order_line_sale" para el POS 1.
+7. Crear una tabla llamada "employees" (por el momento vacia) que tenga un id (creado de forma incremental), nombre, apellido, fecha de entrada, fecha salida, telefono, pais, provincia, codigo_tienda, posicion. Decidir cual es el tipo de dato mas acorde.
+8. Insertar nuevos valores a la tabla "employees" para los siguientes 4 empleados: 
+	- Juan Perez, 2022-01-01, telefono +541113869867, Argentina, Santa Fe, tienda 2, Vendedor. 
+	- Catalina Garcia, 2022-03-01, Argentina, Buenos Aires, tienda 2, Representante Comercial
+	- Ana Valdez, desde 2020-02-21 hasta 2022-03-01, España, Madrid, tienda 8, Jefe Logistica
+	- Fernando Moralez, 2022-04-04, España, Valencia, tienda 9, Vendedor.
+9. Crear un backup de la tabla "cost" agregandole una columna que se llame "last_updated_ts" que sea el momento exacto en el cual estemos realizando el backup en formato datetime.
+10. El cambio en la tabla "order_line_sale" en el punto 6 fue un error y debemos volver la tabla a su estado original, como lo harias?

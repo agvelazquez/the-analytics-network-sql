@@ -50,7 +50,7 @@ Ambas respuestas van a ser consideradas validas.
 10. Cuales son los productos disponibles para la venta (activos) de la marca Phillips? 
 11. Obtener el monto vendido por tienda y moneda y ordenarlo de mayor a menor por valor nominal. 
 12. Cual es el precio promedio de venta de cada producto en las distintas monedas? Recorda que los valores de venta, impuesto, descuentos y creditos es por el total de la linea.
-13. Cual es el valor de venta neta de la orden mas grande en cada moneda?
+13. Cual es el monto final que paga el cliente por cada linea de venta? Nota: los creditos son ajustes que se le hacen a la orden por puntos que tiene el cliente y los usa en la compra como un descuento.
 
 
 ## Clase 3

@@ -47,10 +47,10 @@ Ambas respuestas van a ser consideradas validas.
 7. Cual es el % de descuentos otorgados (sobre las ventas) por tienda?
 8. Obtener las ventas netas y el porcentaje de descuento otorgado por producto en Argentina. 
 9. Las tablas "market_count" y "super_store_count" representan dos sistemas distintos que usa la empresa para contar la cantidad de gente que ingresa a tienda, uno para las tiendas de Latinoamerica y otro para Europa. Obtener en una unica tabla, las entradas a tienda de ambos sistemas. 
-10. Cuales son los productos disponibles de la marca Phillips? 
-11. Obtener el monto vendido por tienda y ordenarlo de mayor a menor. 
-12. Obtener el monto vendido por tienda, para las tiendas que vendieron mas $9000, ordenado de mayor a menor. 
-13. Obter el maximo valor para una orden de venta.
+10. Cuales son los productos disponibles para la venta (activos) de la marca Phillips? 
+11. Obtener el monto vendido por tienda y moneda y ordenarlo de mayor a menor por valor nominal. 
+12. Cual es el precio promedio de venta de cada producto en las distintas monedas? Recorda que los valores de venta, impuesto, descuentos y creditos es por el total de la linea.
+13. Cual es el valor de venta neta de la orden mas grande en cada moneda?
 
 
 ## Clase 3

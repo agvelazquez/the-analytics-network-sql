@@ -58,7 +58,7 @@ Podes revisar las respuestas aqui:
 
 ## Sobre nosotros 👋🏼
 
-[sqldeceroamessi](https://sqldeceroamessi.carrd.co/) es la plataforma de enseñanza cuyo objetivo es crear profesioanles de alta performance en el area de datos.
+[The Analytics Network](https://sqldeceroamessi.carrd.co/) es una comunidad cuyo objetivo es crear profesionales de alta performance en el area de datos.
 
 ## Referencias 
 

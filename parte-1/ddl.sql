@@ -12,7 +12,7 @@ DROP TABLE IF EXISTS stg.product_master ;
     
 CREATE TABLE stg.product_master
                  (
-                            , codigo_producto VARCHAR(255)
+                              codigo_producto VARCHAR(255)
                             , nombre          VARCHAR(255)
                             , categoria       VARCHAR(255)
                             , subcategoria    VARCHAR(255)

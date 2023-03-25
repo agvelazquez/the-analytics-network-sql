@@ -92,11 +92,12 @@
 
 ### Clase 8:
 
-* Windows functions 3: sum, avg
-* Funciones para el manejo de datos string y date
-* Ejercicios dificultad Media - Parte 1
-* Ejercicios dificultad Media - Parte 2
-* Homework
+* Windows functions 3: sum, avg.
+* Funciones para el manejo de datos string y date.
+* Tabla calendario.
+* Ejercicios dificultad Media - Parte 1.
+* Ejercicios dificultad Media - Parte 2.
+* Homework.
 
 
 ### Clase 9:

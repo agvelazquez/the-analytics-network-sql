@@ -93,7 +93,7 @@
 ### Clase 8:
 
 * Windows functions 3: sum, avg.
-* Funciones para el manejo de datos string y date.
+* Funciones para el manejo de datos tipo date.
 * Tabla calendario.
 * Ejercicios dificultad Media - Parte 1.
 * Ejercicios dificultad Media - Parte 2.
@@ -104,7 +104,7 @@
 
 * Self join vs window function.
 * Nested vs correlated subqueries.
-* Regex.
+* Funciones para el manejo de datos tipo string.
 * Ejercicio integrador
 
 

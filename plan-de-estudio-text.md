@@ -102,8 +102,9 @@
 
 ### Clase 9:
 
-* Stored Procedures.
-* Merge update & Upsert.
+* Self join vs window function.
+* Nested vs correlated subqueries.
+* Regex.
 * Ejercicio integrador
 
 
@@ -126,9 +127,9 @@
 
 ### Clase 12:
 
-* Regex.
-* Self join vs window function.
-* Nested vs correlated subqueries.
+* ETL/ELT
+* Stored Procedures.
+* Merge update & Upsert.
 * Ejercicios de entrevista dificultad alta - Parte 1
 * Ejercicios de entrevista dificultad alta - Parte 2
 * Homework.

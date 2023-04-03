@@ -79,19 +79,31 @@ select distinct pais
 from stg.store_master
 
 --2 Cuantos productos por subcategoria tiene disponible para la venta?
-
+select subcategoria, count(1)
+from stg.product_master
+group by subcategoria
 
 --3 Cuales son las ordenes de venta de Argentina de mayor a $100.000?
-
+select distinct orden  
+from stg.order_line_sale
+where venta > 100000
 
 --4 Obtener los decuentos otorgados durante Noviembre de 2022 en cada una de las monedas?
-
+select moneda, sum(descuento) as total_descuento
+from stg.order_line_sale
+where fecha between '2022-11-01' and '2022-11-30'
+group by moneda
 
 --5 Obtener los impuestos pagados en Europa durante el 2022.
-
+select moneda, sum(impuestos) as total_impuestos
+from stg.order_line_sale
+where fecha between '2022-01-01' and '2022-12-31' and moneda = 'EUR'
+group by moneda
 
 --6 En cuantas ordenes se utilizaron creditos?
-
+select count(1) 
+from stg.order_line_sale
+where creditos is not null
 
 --7 Cual es el % de descuentos otorgados (sobre las ventas) por tienda?
 
@@ -102,7 +114,8 @@ from stg.store_master
 --9 Obtener las ventas netas y el porcentaje de descuento otorgado por producto en Argentina.
 
 
---10 Las tablas "market_count" y "super_store_count" representan dos sistemas distintos que usa la empresa para contar la cantidad de gente que ingresa a tienda, uno para las tiendas de Latinoamerica y otro para Europa. Obtener en una unica tabla, las entradas a tienda de ambos sistemas.
+--10 Las tablas "market_count" y "super_store_count" representan dos sistemas distintos que usa la empresa para contar la cantidad de gente que ingresa a tienda, 
+--uno para las tiendas de Latinoamerica y otro para Europa. Obtener en una unica tabla, las entradas a tienda de ambos sistemas.
 
 
 --11 Cuales son los productos disponibles para la venta (activos) de la marca Phillips?

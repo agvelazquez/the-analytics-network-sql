@@ -65,7 +65,7 @@ Ambas respuestas van a ser consideradas validas.
 7. Calcular la cantidad de unidades vendidas por material. Para los productos que no tengan material usar 'Unknown', homogeneizar los textos si es necesario.
 8. Mostrar la tabla order_line_sales agregando una columna que represente el valor de venta bruta en cada linea convertido a dolares usando la tabla de tipo de cambio.
 9. Calcular cantidad de ventas totales de la empresa en dolares.
-10. Mostrar en la tabla de ventas el margen de venta por cada linea. Siendo margen = (venta - promociones) - costo expresado en dolares.
+10. Mostrar en la tabla de ventas el margen de venta por cada linea. Siendo margen = (venta - descuento) - costo expresado en dolares.
 11. Calcular la cantidad de items distintos de cada subsubcategoria que se llevan por numero de orden.
 
 

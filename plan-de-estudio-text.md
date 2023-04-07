@@ -93,6 +93,7 @@
 ### Clase 8:
 
 * Windows functions 3: sum, avg.
+* Windows functions 4: first_value, last_value.
 * Funciones para el manejo de datos tipo date.
 * Tabla calendario.
 * Ejercicios dificultad Media - Parte 1.

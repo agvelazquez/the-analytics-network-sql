@@ -96,7 +96,7 @@
 * Windows functions 4: first_value, last_value.
 * Funciones para el manejo de datos tipo date.
 * Tabla calendario.
-* Ejercicios dificultad Media.
+* Ejercicios de entrevistas dificultad Media.
 * Homework.
 
 

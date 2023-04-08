@@ -76,7 +76,8 @@ en cada columna)
 2. Hacer un update a la tabla de product_master agregando una columna llamada "marca", con la marca de cada producto con la primer letra en mayuscula.  Sabemos que las marcas que tenemos son: Levi's, Tommy Hilfiger, Samsung, Phillips, Acer, JBL y Motorola. En caso de no encontrarse en la lista usar 'Unknown'.
 3. Un jefe de area tiene una tabla que contiene datos sobre las principales empresas de distintas industrias en rubros que pueden ser competencia:
 
-Empresa 	| Rubro 	| Facturación
+| empresa | rubro | facturacion |
+|:------:|------------|:---------:|
 El Corte Ingles | Departamental | $110.99B
 Mercado Libre	| ECOMMERCE 	| $115.86B
 Fallabela 	| departamental | $20.46M
@@ -96,7 +97,8 @@ Los elementos de la columna rubro debe estar expresados en letra minúscula.
 
 Output esperado:
 
-Rubro 		| FacturacionTOtal
+| rubro | facturacion_total |
+|:------:|------------|
 departamental 	| 111.01B
 ecommerce 	| 115.86B
 indumentaria 	| 999.98M

@@ -49,3 +49,28 @@ insert into test.empleados values (6,'Ricardo',12000,2);
 insert into test.empleados values (7,'Luciano',9000,2);
 insert into test.empleados values (8,'Romina',5000,2);
 ```
+
+## Ejercicio 3 
+
+- Ejecutar el siguiente script para crear la tabla players y matches dentro del esquema test. 
+- Encontrar el player_id ganador de cada grupo. El ganador es aquel que anota mas puntos (score) en caso de empate, el que tenga menor player_id gana.
+
+```
+drop table if exists test.players;
+create table test.players (player_id int, group varchar(1));
+insert into test.players values (15,A);
+insert into test.players values (25,A);
+insert into test.players values (30,A);
+insert into test.players values (45,A);
+insert into test.players values (10,B);
+insert into test.players values (35,B);
+insert into test.players values (50,B);
+insert into test.players values (20,C);
+insert into test.players values (40,C);
+create table test.matches (match_id int, first_player int, second_player int, first_score int, second_score int);
+insert into test.matches values (1,15,45,3,0);
+insert into test.matches values (2,30,25,1,2);
+insert into test.matches values (3,30,15,2,0);
+insert into test.matches values (4,40,20,5,2);
+insert into test.matches values (5,35,50,1,1);
+```

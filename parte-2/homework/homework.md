@@ -32,15 +32,71 @@ en cada columna)
 4. Obtener las ventas totales en USD de productos que NO sean de la categoria "TV" NI esten en tiendas de Argentina.
 5. El gerente de ventas quiere ver el total de unidades vendidas por dia junto con otra columna con la cantidad de unidades vendidas una semana atras y la diferencia entre ambos. Nota: resolver en dos querys usando en una CTEs y en la otra windows functions.
 6. Crear una vista de inventario con la cantidad de inventario por dia, tienda y producto, que ademas va a contar con los siguientes datos: 
-  - Nombre y categorias de producto
-  - Pais y nombre de tienda
-  - Costo del inventario por linea (recordar que si la linea dice 4 unidades debe reflejar el costo total de esas 4 unidades)
-  - Una columna llamada "is_last_snapshot" para el ultimo dia disponible de inventario. 
-  - Ademas vamos a querer calcular una metrica llamada "Average days on hand (DOH)" que mide cuantos dias de venta nos alcanza el inventario. Para eso DOH = Unidades en Inventario Promedio / Promedio diario Unidades vendidas ultimos 7 dias. 
+  	- Nombre y categorias de producto
+  	- Pais y nombre de tienda
+  	- Costo del inventario por linea (recordar que si la linea dice 4 unidades debe reflejar el costo total de esas 4 unidades)
+  	- Una columna llamada "is_last_snapshot" para el ultimo dia disponible de inventario. 
+  	- Ademas vamos a querer calcular una metrica llamada "Average days on hand (DOH)" que mide cuantos dias de venta nos alcanza el inventario. Para eso DOH = Unidades en Inventario Promedio / Promedio diario Unidades vendidas ultimos 7 dias. 
+  	- Notas:
+ 		-  Antes de crear la columna DOH, conviene crear una columna que refleje el Promedio diario Unidades vendidas ultimos 7 dias.
+ 		-  El nivel de agregacion es dia/tienda/sku.
+ 		-  El Promedio diario Unidades vendidas ultimos 7 dias tiene que calcularse para cada dia.
 
-Notas:
- -  Antes de crear la columna DOH, conviene crear una columna que refleje el Promedio diario Unidades vendidas ultimos 7 dias.
- -  El nivel de agregacion es dia/tienda/sku.
- -  El Promedio diario Unidades vendidas ultimos 7 dias tiene que calcularse para cada dia.
+
+## Clase 8 
+
+1. Realizar el Ejercicio 5 de la clase 6 donde calculabamos la contribucion de las ventas brutas de cada producto utilizando una window function. 
+2. La regla de pareto nos dice que aproximadamente un 20% de los productos generan un 80% de las ventas. Armar una vista a nivel sku donde se pueda identificar por orden de contribucion, ese 20% aproximado de SKU mas importantes. (Nota: En este ejercicios estamos construyendo una tabla que muestra la regla de Pareto)
+3. Calcular el crecimiento de ventas por tienda mes a mes, con el valor nominal y el valor % de crecimiento.
+4. Crear una vista a partir de la tabla "return_movements" que este a nivel Orden de venta, item y que contenga las siguientes columnas: 
+	- Orden
+	- Sku
+	- Cantidad unidated retornadas
+	- Valor USD retornado (resulta de la cantidad retornada * valor USD del precio unitario bruto con que se hizo la venta)
+	- Nombre producto
+	- Primera_locacion (primer lugar registrado, de la columna "desde", para la orden/producto)
+	- Ultima_locacion  (el ultimo lugar donde se registro, de la columna "hasta", el producto/orden)
+5. Crear una tabla calendario llamada "date" con las fechas del 2022 incluyendo el año fiscal y trimestre fiscal (en ingles Quarter). El año fiscal de la empresa comienza el primero Febrero de cada año y dura 12 meses. Realizar la tabla para 2022 y 2023. La tabla debe contener: 
+	- Fecha (date)
+	- Mes (date)
+	- Año (date)
+	- Dia de la semana (text, ejemplo: "Monday")
+	- "is_weekend" (boolean, indicando si es Sabado o Domingo)
+	- Mes (text, ejemplo: June)
+	- Año fiscal (date)
+	- Año fiscal (text, ejemplo: "FY2022")
+	- Trimestre fiscal (text, ejemplo: Q1)
+	- Fecha del año anterior (date, ejemplo: 2021-01-01 para la fecha 2022-01-01)
+	- Nota: En general una tabla date es creada para muchos años mas (minimo 10), por el momento nos ahorramos ese paso y de la creacion de feriados.
 
 
+## Clase 9
+
+1. Calcular el crecimiento de ventas por tienda mes a mes, con el valor nominal y el valor % de crecimiento. Utilizar self join. 
+2. Hacer un update a la tabla de product_master agregando una columna llamada "marca", con la marca de cada producto con la primer letra en mayuscula.  Sabemos que las marcas que tenemos son: Levi's, Tommy Hilfiger, Samsung, Phillips, Acer, JBL y Motorola. En caso de no encontrarse en la lista usar 'Unknown'.
+3. Un jefe de area tiene una tabla que contiene datos sobre las principales empresas de distintas industrias en rubros que pueden ser competencia:
+
+Empresa 	| Rubro 	| Facturación
+El Corte Ingles | Departamental | $110.99B
+Mercado Libre	| ECOMMERCE 	| $115.86B
+Fallabela 	| departamental | $20.46M
+Tienda Inglesa 	| Departamental | $10,78M
+Zara 		| INDUMENTARIA 	| $999.98M
+
+
+Armar una query que refleje lo siguiente:
+
+- Rubro
+- FacturacionTotal (total de facturación por rubro).
+- Ordenadas por la columna rubro en orden ascendente.
+
+
+La columna FacturacionTotal debe estar expresada en millones/billones según corresponda y con 2 decimales después de la coma.
+Los elementos de la columna rubro debe estar expresados en letra minúscula.
+
+Output esperado:
+
+Rubro 		| FacturacionTOtal
+departamental 	| 111.01B
+ecommerce 	| 115.86B
+indumentaria 	| 999.98M

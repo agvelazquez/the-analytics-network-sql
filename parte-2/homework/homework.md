@@ -38,8 +38,9 @@ en cada columna)
   - Una columna llamada "is_last_snapshot" para el ultimo dia disponible de inventario. 
   - Ademas vamos a querer calcular una metrica llamada "Average days on hand (DOH)" que mide cuantos dias de venta nos alcanza el inventario. Para eso DOH = Unidades en Inventario Promedio / Promedio diario Unidades vendidas ultimos 7 dias. 
 
+Notas:
+ -  Antes de crear la columna DOH, conviene crear una columna que refleje el Promedio diario Unidades vendidas ultimos 7 dias.
+ -  El nivel de agregacion es dia/tienda/sku.
+ -  El Promedio diario Unidades vendidas ultimos 7 dias tiene que calcularse para cada dia.
 
-Nota: Antes de crear la columna DOH, conviene crear una columna que refleje el Promedio diario Unidades vendidas ultimos 7 dias. 
-Nota2: El nivel de agregacion es dia/tienda/sku.
-Nota3: El Promedio diario Unidades vendidas ultimos 7 dias tiene que calcularse para cada dia.
 

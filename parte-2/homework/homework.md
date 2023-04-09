@@ -17,7 +17,10 @@ Si ya forkeaste el repositorio, lo que podes hacer es copiar este archivo clicke
 6. Calcular el margen bruto a nivel Subcategoria de producto. Usar la vista creada. 
 7. Calcular la contribucion de las ventas brutas de cada producto al total de la orden. Por esta vez, si necesitas usar una subquery, podes utilizarla.
 8. Calcular las ventas por proveedor, para eso cargar la tabla de proveedores por producto. Agregar el nombre el proveedor en la vista del punto 3. 
-9. Verificar que el nivel de detalle de la vista anterior no se haya modificado, en caso contrario que se deberia ajustar? (contestar la ultima pregunta con un texto escrito en forma de comentario)
+9. Verificar que el nivel de detalle de la vista anterior no se haya modificado, en caso contrario que se deberia ajustar? Que decision tomarias para que no se genereren duplicados? 
+	- Se pide correr la query de validacion. 
+	- Crear una nueva query que no genere duplicacion. 
+	- Explicar brevemente (con palabras escrito tipo comentario) que es lo que sucedia. 
 
 
 ## Clase 7

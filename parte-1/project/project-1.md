@@ -10,7 +10,7 @@ El objetivo no es solo encontrar la query que responda la metrica sino entender 
 General 
 - Ventas brutas, netas y margen
 - Margen por categoria de producto 
-- ROI por categoria de producto. ROI = Valor promedio de inventario / ventas netas 
+- ROI por categoria de producto. ROI = ventas netas / Valor promedio de inventario 
 - AOV (Average order value), valor promedio de la orden. 
 
 Contabilidad

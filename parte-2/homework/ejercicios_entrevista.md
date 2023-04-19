@@ -17,7 +17,7 @@ Si ya forkeaste el repositorio, lo que podes hacer es copiar este archivo clicke
 ```
 create schema test;
 drop table if exists test.turistas;
-create table test.turistas(city varchar(50),days date,cases int);
+create table test.turistas(city varchar(50),days date,personas int);
 insert into test.turistas values('CABA','2022-01-01',100);
 insert into test.turistas values('CABA','2022-01-02',200);
 insert into test.turistas values('CABA','2022-01-03',300);

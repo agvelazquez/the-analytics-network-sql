@@ -31,3 +31,4 @@ Notas:
 - Tiene que ser una tabla en lugar de una vista para que pueda ser consumido rapidamente por el usuario final. 
 - La idea que este todo en un solo lugar facilita la creacion de una sola fuenta de la verdad ("single source of truth"). 
 - AGM es el gross margen ajustado, es decir no solo tomar los costos de los productos sino tomar otros gastos o descuentos que hacen los proveedores al momento de vender el producto. Al ser fijos, estos tienen que distribuirse en los productos vendidos de manera proporcional. 
+- El periodo fiscal de la empresa empieza el primero de febrero.

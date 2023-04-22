@@ -9,20 +9,25 @@ Nivel de detalle de la tabla:
 - Tienda
 
 Con los siguientes atributos 
-- Tienda: Pais, provincia
-- SKU: todas las categorias 
-- Fecha: dia, mes, anio, anio fiscal, quarter fiscal
+- Tienda: Pais, provincia, Nombre de tienda
+- SKU: Categoria, Subcategoria, Subsubcategoria, proveedor
+- Fecha: dia, mes, año, año fiscal, quarter fiscal
 
 y que se pueda calcular las siguiente metricas: 
 - Ventas brutas
-- Promociones
-- Ventas netas
-- Valor final pagado
+- Descuentos
+- Impuestos
+- Creditos
+- Ventas netas (inluye ventas y descuentos)
+- Valor final pagado (incluye ventas, descuentos, impuestos y creditos)
 - ROI
 - Days on hand
 - Costos
 - Margen bruto (gross margin)
 - AGM (adjusted gross margin)
+- AOV
+- Numero de devoluciones
+- Ratio de conversion.
 
 y la posibilidad de obtener para cada una de las metricas anteriores el crecimiento mes a mes. 
 
@@ -32,3 +37,4 @@ Notas:
 - La idea que este todo en un solo lugar facilita la creacion de una sola fuenta de la verdad ("single source of truth"). 
 - AGM es el gross margen ajustado, es decir no solo tomar los costos de los productos sino tomar otros gastos o descuentos que hacen los proveedores al momento de vender el producto. Al ser fijos, estos tienen que distribuirse en los productos vendidos de manera proporcional. 
 - El periodo fiscal de la empresa empieza el primero de febrero.
+- Las metricas tienen que estar calculadas en dolares.

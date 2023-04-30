@@ -5,3 +5,16 @@ La empresa en la cual venimos trabajando le gusto lo que hicimos hasta ahora y q
 Luego en el ultimo paso asi poder implementar una herramienta de BI. 
 
 Debajo vamos a encontrar los pasos que le comunicamos a la empresa y que vamos a tener que realizar para poder hacer realidad el pedido. 
+
+Para organizar la estructura del Data Warehouse (DW) en el repositorio, vamos a crear una carpeta llamada "retail-data-warehouse" dentro de la carpeta actual "project".  A su vez la carpeta va a tener la siguiente estructura de carpetas: 
+
+\\retail-data-warehouse 
+    \\bkp
+    \\stg
+    \\fct
+    \\dim
+    \\forge
+    \\analytics
+    \\viz
+
+Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta representa un esquema del DW. Este paso lo podes hacer una vez que tenes al menos un archivo por carpeta o podes realizarlo al princpio y colocando un archivo vacio llamado "placeholder.md" que luego podes borrar. 

@@ -18,3 +18,21 @@ Para organizar la estructura del Data Warehouse (DW) en el repositorio, vamos a 
     \\viz
 
 Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta representa un esquema del DW. Este paso lo podes hacer una vez que tenes al menos un archivo por carpeta o podes realizarlo al princpio y colocando un archivo vacio llamado "placeholder.md" que luego podes borrar. 
+
+├── src
+│   ├── controller
+│   │   ├── **/*.css
+│   ├── views
+│   ├── model
+│   ├── index.js
+├── public
+│   ├── css
+│   │   ├── **/*.css
+│   ├── images
+│   ├── js
+│   ├── index.html
+├── dist (or build
+├── node_modules
+├── package.json
+├── package-lock.json 
+└── .gitignore

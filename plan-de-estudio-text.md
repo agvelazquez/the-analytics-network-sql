@@ -121,7 +121,7 @@
 * Montar un Datalake y un Data Warehouse. Ambientes de produccion y testeo.
 * Integridad referencial.
 * Introduccion al modelado dimensional.
-* Guia de estilo y sintaxis.
+* Normalizacion vs denormalizacion.
 * Homework.
 
 
@@ -147,6 +147,7 @@
 ### Clase 14 
 
 * Proyecto integrador - Montar un Data Warehouse para una empresa de Retail
+* Guia de estilo y sintaxis.
 * Repaso de temas anteriores. 
 * Preguntas libres.
    

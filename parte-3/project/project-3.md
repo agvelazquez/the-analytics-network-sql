@@ -32,4 +32,5 @@ Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta 
     - inventory: 
 7. Crear una Guia de estilo que va a a marcar los estadares de sintaxis para cualquier desarrollo del DW. (podes usar la misma que mostramos en clase o editarla!) 
 8. Crear una base de datos que se llame "dev". Correr todos los scripts de ddl para tener la estructura en un ambiente que vamos a usar para el desarrollo y testeo de nuevas queries.
-9. (Opcional): Conectar la tabla de order_sale_line a PowerBI y realizar una visualizacion que resuma el estado de ventas y ganancias de la empresa.
+9. Encapsular la logica de conversion de moneda en una funcion y reutilizarla en los scripts donde sea necesario. 
+10. (Opcional): Conectar la tabla de order_sale_line a PowerBI y realizar una visualizacion que resuma el estado de ventas y ganancias de la empresa.

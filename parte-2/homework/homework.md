@@ -77,7 +77,7 @@ en cada columna)
 
 1. Calcular el crecimiento de ventas por tienda mes a mes, con el valor nominal y el valor % de crecimiento. Utilizar self join. 
 2. Hacer un update a la tabla de product_master agregando una columna llamada "marca", con la marca de cada producto con la primer letra en mayuscula.  Sabemos que las marcas que tenemos son: Levi's, Tommy Hilfiger, Samsung, Phillips, Acer, JBL y Motorola. En caso de no encontrarse en la lista usar 'Unknown'.
-3. Un jefe de area tiene una tabla que contiene datos sobre las principales empresas de distintas industrias en rubros que pueden ser competencia:
+3. Un jefe de area tiene una tabla que contiene datos sobre las principales empresas de distintas industrias en rubros que pueden ser competencia y nos manda por mail la siguiente informacion:
 
 | empresa | rubro | facturacion |
 |:------:|------------|:---------:|
@@ -93,6 +93,7 @@ Armar una query que refleje lo siguiente:
 - Rubro
 - FacturacionTotal (total de facturación por rubro).
 - Ordenadas por la columna rubro en orden ascendente.
+- Nota: a partir del mail que recibimos podemos ponerlo en un csv y subirlo a la base de datos o crear una tabla generando inserts luego.
 
 
 La columna FacturacionTotal debe estar expresada en millones/billones según corresponda y con 2 decimales después de la coma.

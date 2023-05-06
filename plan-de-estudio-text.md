@@ -118,9 +118,12 @@
 
 ### Clase 11: 
 
-* Montar un Datalake y un Data Warehouse. Ambientes de produccion y testeo.
+* Diferencias entre Datalake y Data Warehouse. 
+* Ambientes de produccion y testeo.
+* Paradigma de base de datos.
 * Integridad referencial.
 * Introduccion al modelado dimensional.
+* Otros tipos de modelado.
 * Normalizacion vs denormalizacion.
 * Homework.
 
@@ -129,17 +132,20 @@
 
 * ETL/ELT
 * Stored Procedures.
-* Merge update & Upsert.
-* Ejercicios de entrevista dificultad alta - Parte 1
-* Ejercicios de entrevista dificultad alta - Parte 2
+* Estrategias para insertar y modelar datos en SQL.
+* User defined functions.
+* De stored procedures a modelos en dbt.
+* Ejercicios de entrevista dificultad alta - Parte 1.
+* Ejercicios de entrevista dificultad alta - Parte 2.
 * Homework.
 
 
 ### Clase 13:
 
-* Plan de ejecucion
-* Performance tunning
-* SQL Anti Patterns
+* Plan de ejecucion.
+* Performance tunning.
+* Guia de estilo y sintaxis.
+* SQL Anti Patterns.
 * Ejercicios de entrevista dificultad alta - Parte 3
 * Homework
 
@@ -147,7 +153,6 @@
 ### Clase 14 
 
 * Proyecto integrador - Montar un Data Warehouse para una empresa de Retail
-* Guia de estilo y sintaxis.
 * Repaso de temas anteriores. 
 * Preguntas libres.
    

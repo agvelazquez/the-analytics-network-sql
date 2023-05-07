@@ -34,4 +34,8 @@ Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta 
 8. Crear una base de datos que se llame "dev". Correr todos los scripts de ddl para tener la estructura en un ambiente que vamos a usar para el desarrollo y testeo de nuevas queries.
 9. Encapsular la logica de conversion de moneda en una funcion y reutilizarla en los scripts donde sea necesario. 
 10. (WIP) Crear store procedures que generen backus de todas las tablas en esquema stg.
-11. (Opcional): Conectar la tabla de order_sale_line a PowerBI y realizar una visualizacion que resuma el estado de ventas y ganancias de la empresa.
+11. Crear una tabla de logging que indique cada vez que se realicen modificaciones a una tabla con la siguiente informacion: 
+    - Tabla modificada
+    - Fecha de modificacion.
+    - Stored procedure responsable de la modificacion. 
+13. (Opcional): Conectar la tabla de order_sale_line a PowerBI y realizar una visualizacion que resuma el estado de ventas y ganancias de la empresa.

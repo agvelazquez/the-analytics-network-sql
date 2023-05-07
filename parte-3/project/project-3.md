@@ -24,6 +24,7 @@ Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta 
 1. Vamos a reciclar el script de ddl.sql que utilizamos al principio de todo junto con los scripts de "returns", "supplier" y "employee" para armar la estructura de nuestra carpeta stg. Crear POR CADA TABLA en stg un archivo en la carpeta stg con el ddl de cada tabla cuyo nombre sera el nombre de la tabla. Ejemplo: "cost.sql". No es necesario correrlos nuevamente, asi reutilizamos lo que ya tenemos. 
 2. Limpiar cualquier otra tabla (si existiese) que nos haya quedado de las partes anteriores que no corresponda al Data Warehouse. 
 3. Crear un script para cada tabla dentro de fct y dim, con sus respectivas PK and FK. Tener en consideracion que tablas son de "fact" o 'hechos" y que tablas son "dimensional" o "dimensionales".
+4. Crear una base de datos que se llame "dev". Correr todos los scripts de ddl para tener la estructura en un ambiente que vamos a usar para el desarrollo y testeo de nuevas queries.
 
 ### Parte 2
 
@@ -35,9 +36,8 @@ Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta 
     - return:
     - inventory: 
 4. Crear una Guia de estilo que va a a marcar los estadares de sintaxis para cualquier desarrollo del DW. (podes usar la misma que mostramos en clase o editarla!) 
-5. Crear una base de datos que se llame "dev". Correr todos los scripts de ddl para tener la estructura en un ambiente que vamos a usar para el desarrollo y testeo de nuevas queries.
-6. Encapsular la logica de conversion de moneda en una funcion y reutilizarla en los scripts donde sea necesario. 
-7. (WIP) Crear store procedures que generen backus de todas las tablas en esquema stg.
+5. Encapsular la logica de conversion de moneda en una funcion y reutilizarla en los scripts donde sea necesario. 
+6. (WIP) Crear store procedures que generen backus de todas las tablas en esquema stg.
 
 ### Parte 3
 

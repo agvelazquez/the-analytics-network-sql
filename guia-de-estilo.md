@@ -1,4 +1,5 @@
 # The Analytics Network - Guia de estilo de SQL
+### "Las lineas de código son baratas, el tiempo de las personas es caro."
 
   - [Conceptos generales](#conceptos-generales)
   - [Sintaxis](#sintaxis)
@@ -28,13 +29,16 @@ Es mas fácil de leer y de ser consistente, evitar capitalizaciones, espacios o 
 
 #### Nunca usar palabras reservadas como identificadores.
 
+#### Es preferible que todas las palabras reservadas y nombres de objetos (columnas, tablas, funciones, etc) esten en ingles.
+Todos los motores de base de datos fueron contruidos en ingles, las sentencias son nativas en ingles y la cantidad de informacion disponible en internet en ingles es mucho mayor que en español. Ademas evitamos errores con caracteres desconocidos. 
+
 <br>
 
 
 ## Sintaxis
 
-#### Palabras claves y funciones deben ser lowercase.
-Lowercase es más fail de leer que uppercase y no tienes que estar constantemente apretando la tecla shift.
+#### Palabras claves y funciones deben estar en minuscula.
+Minuscula es más fail de leer que mayuscula y no tenes que estar constantemente apretando la tecla shift.
 
 ```sql
 /* Recomendado */
@@ -61,12 +65,12 @@ from customers
 <br>
 
 #### Usar `!=` en vez de`<>`.
-`!=` se lee “no “igual que es mas entendible que <>
+`!=` se lee mas facil “no igual" que es mas entendible que usar `<>`.
 
 <br>
 
 #### Usar `||` en vez de `concat`.
-`||` es un operador standard de SQL, y en algunos operadores concat solo acepta dos argumentos, ejemplo Redshift.
+`||` es un operador standard de SQL, y en algunos operadores (ejemplo Redshift) `concat` solo acepta dos argumentos.
 
 <br>
 
@@ -87,6 +91,7 @@ from customers
 <br>
 
 #### Siempre usar `as` cuando le vamos a poner alias a columnas o tablas
+
 ```sql
 /* Recomendado */
 select count(*) as customers_count
@@ -100,6 +105,7 @@ from customers
 <br>
 
 #### Siempre ponerle un alias a las agregaciones
+
 ```sql
 /* Recomendado */
 select max(id) as max_customer_id
@@ -211,7 +217,7 @@ where email like '''%@domain.com'''
 <br>
 
 #### Usar `inner join` en vez de solo `join`.
-Es mejor que sea explicito que tipo de join estamos utilizamos.
+Es mejor que sea explicito que tipo de join estamos utilizando.
 
 ```sql
 /* Recomendado */
@@ -227,7 +233,7 @@ join orders on customers.id = orders.customer_id
 
 <br>
 
-#### En las condiciones del join, poner la tabla que fue reverenciada primero inmediatamente después del`on`.
+#### En las condiciones del join, poner la tabla que fue referenciada primero inmediatamente después del`on`.
 Es mas fácil entender la relación de los campos entre tablas y si va a haber una explosión de datos.
 
 ```sql
@@ -466,7 +472,7 @@ where email like '%@domain.com'
 
 #### Nunca terminar la linea con un operador `and`, `or`, `+`, `||`, etc.
 Si hay alguno de estos operadores cada uno debe tener su linea y debemos ponerlo al inicio.
-  - La idea es leer por arriba el lado izquierdo de la query y darse cuenta rápidamente la logic de la query. Sin necesidad de leer toda lea linea.
+  - La idea es leer por arriba el lado izquierdo de la query y darse cuenta rápidamente la logica de la query, sin necesidad de leer toda lea linea.
   - Poner la condición en la misma linea que el operador lo hace mas claro de entender por que esta siendo usado.
 
 ```sql
@@ -490,16 +496,14 @@ where
 #### Usar “leading commas”.
 Si el coding tiene comas poner cada una en un nivel distinto, poner las comas al inicio seguidas de un espacio.
   - Es la forma mas fácil de ver si falta alguna coma.
-  - Version control diffs will be cleaner when adding to the end of a list because you don't have to add a trailing comma to the preceding line.
   - La coma solo esta ahi por lo que sigue, si nada sigue la coma no tiene sentido por eso es mas claro y menos facil que haya errores si ponemos las comas adelante.
 
 ```sql
 /* Recomendado */
-with
-    customers as (
+with customers as (
         ...
     )
-    , paying_customers as (
+, paying_customers as (
         ...
     )
 select
@@ -535,7 +539,7 @@ where email in (
 
 <br>
 
-#### `select` clause:
+#### `select`:
   - Sí hay solo una columna ponerla al mismo nivel que el `select`.
   - Sí hay multiples columnas, poner cada una en una linea, incluida la primera e indentar un nivel más que el `select`.
   - Si hay un `distinct` qualifier, ponerlo en el mismo nivel que el`select`.
@@ -570,7 +574,7 @@ select distinct state, country
 
 <br>
 
-#### `from` clause:
+#### `from`:
   - Poner la tabla inicial en la misma linea que el`from`.
   - Si hay otras tablas en el join:
     - Poner cada `join` en su propia linea, en el mismo nivel de indentation que el `from`.
@@ -638,13 +642,14 @@ where email like '%@domain.com'
 <br>
 
 #### `group by` y `order by`:
-  - Si se agrupa/ordena con numerous ponerlos todos en la misma linea que el `group by`/`order by`.
+  - Evitar agrupa/ordena con numeros.
+    - Puede haber problemas si cambiamos las columnas pero no editamos las columnas referenciadas en el `group by`/`order by` haciendo que ordenemos/agrupemos por columnas indeseadas.
   - Si se agrupa/ordena por el nombre de la columna:
     - Si hay una sola columna hacerlo al mismo nivel que el `group by`/`order by`.
     - Si hay mas de una columna ponerlo cada uno en su respectiva linea e indentedo con respecto al `group by`/`order by`.
 
 ```sql
-/* Recomendado */
+/* No recomendado */
 group by 1, 2, 3
 
 /* No recomendado */
@@ -671,14 +676,13 @@ No recomendado by plan_name
 
 <br>
 
-#### CTEs:en su propia linea, indentada un nivel más que el propio `with`.
-  - Agregar un blanco en cad alinea del CTE para marcar la diferencia.
-  - Poner comentarios sobre él CTE dentro del paréntesis del CTE al mismo nivel que el `select`.
+#### CTEs:en su propia linea, con el nombre del CTE al mismo nivel que el `with`.
+  - Agregar un blanco en cada alinea del CTE para marcar la diferencia.
+  - Poner comentarios sobre el CTE dentro del paréntesis del CTE al mismo nivel que el `select`.
 
 ```sql
 /* Recomendado */
-with
-    paying_customers as (
+with paying_customers as (
         select ...
         from customers
     )
@@ -687,7 +691,8 @@ select ...
 from paying_customers
 
 /* No recomendado */
-with paying_customers as (
+with 
+  paying_customers as (
 
     select ...
     from customers
@@ -697,16 +702,15 @@ select ...
 from paying_customers
 
 /* Recomendado */
-with
-    paying_customers as (
-        select ...
-        from customers
+with paying_customers as (
+  select ...
+  from customers
     )
 
-    , paying_customers_per_month as (
-        /* CTE comments... */
-        select ...
-        from paying_customers
+, paying_customers_per_month as (
+  /* CTE comments... */
+  select ...
+  from paying_customers
     )
 
 select ...
@@ -738,18 +742,17 @@ from paying_customers_per_month
   - Se puede poner un `case` statement todo en una tunica linea si tiene un unico`when` y la linea no es muy larga.
   - Para `case` statements con multiples lineas:
     - `when`:
-      - `when`deben empezar en su propia linea e indentarlo un nivel mas que el `case` statement.
-      - SI un `when` tiene multiples condiciones, mantener la primera condition en la primer linea y poner el resto en sus propias lineas e intentarías todas al mismo nivel.
+      - Cada `when` debe empezar en su propia linea e indentarlo un nivel mas que el `case` statement.
+      - Si un `when` tiene multiples condiciones, mantener la primera condicion en la primer linea y poner el resto en sus propias lineas e intentarlas todas al mismo nivel.
     - `then`:
-      - `then` pueden ir en la misma linea del`when`sino causa que la linea sea muy larga.
+      - Los `then` pueden ir en la misma linea del `when` mientras que la linea sea muy larga.
       - Sino, utilizar el `then` en su propia linea, indentada un nivel mas que el `when` que le corresponde.
       - Si un `then` tiene multiples lineas, cada uno debe tener su propia linea y estar intentada un nivel mas que el `then`.
     - `else`:
-      - `else` debe ir en su propia lineal mismo nivel que el`when`.
-      - If an `else` tiene multiples lineas cada linea tienen que estar inventadas un nivel mas que la condición `else`.
+      - Un `else` debe ir en su propia linea, al mismo nivel que el `when`.
+      - Si un `else` tiene multiples lineas cada linea tienen que estar inventadas un nivel mas que la condición `else`.
     - `end`:
-      - `end` debe tener su propia linea al mismo nivel que la sentencia `case`.
-      - If the `case` starts after a leading comma and space, align `end` with `case` by adding two extra spaces before it.
+      - El `end` debe tener su propia linea al mismo nivel que la sentencia `case`.
     - Si el `case` esta dentro de una función de agregación se deben cumplir los mismo requisaos mencionados indentado un nivel mas que la función de agregación. 
 
 ```sql
@@ -820,14 +823,14 @@ select
 
 <br>
 
-#### Window functions:
+####  Window functions:
   - Podes poner toda la Window function en una linea sino es muy larga.
   - Si la tenes que dividir en multiples lineas:
-    - Poner cada clausal dentro del `over ()` en su propia linea, indentarla un nivel mas de la window function. Ejemplo:
+    - Poner cada clausula dentro del `over ()` en su propia linea, indentarla un nivel mas de la window function. Ejemplo:
       - `partition by`
       - `order by`
       - `rows between` / `range between`
-    - Poner el parenthesis final del `over ()` en su propia linea con una indentacion similar a la primera linea de la window function.
+    - Poner el parentesis final del `over ()` en su propia linea con una indentacion similar a la primera linea de la window function.
 
 ```sql
 
@@ -860,7 +863,7 @@ from orders
 <br>
 
 #### `in` lists:
-  - Mostrar los valores de una lista en multiples lineas cuando  es muy larga.
+  - Mostrar los valores de una lista en multiples lineas cuando es muy larga.
 
 ```sql
 /* Recomendado */
@@ -894,7 +897,7 @@ where plan_name in ('monthly', 'yearly')
 ## Creditos
 
 Esta guía estuvo inspirada por las siguientes guías:
-  - [Brooklyn Analytics] (https://github.com/brooklyn-data/co/blob/main/sql_style_guide.md)
+  - [Brooklyn Analytics](https://github.com/brooklyn-data/co/blob/main/sql_style_guide.md)
   - [Fishtown Analytics' dbt coding conventions](https://github.com/fishtown-analytics/corp/blob/b5c6f55b9e7594e1a1e562edf2378b6dd78a1119/dbt_coding_conventions.md)
   - [Matt Mazur's SQL style guide](https://github.com/mattm/sql-style-guide/blob/3eaef3519ca5cc7f21feac6581b257638f9b1564/README.md)
   - [GitLab's SQL style guide](https://about.gitlab.com/handbook/business-ops/data-team/sql-style-guide/)

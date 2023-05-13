@@ -302,6 +302,10 @@ inner join customers on
     and customers.email like '%@domain.com'
 where orders.total_amount >= 100
 ```
+<br>
+
+#### Priorizar `left join` sobre `right join`.
+Si estas usando `right join` probablemente debas cambiar el orden de la tabla.
 
 <br>
 

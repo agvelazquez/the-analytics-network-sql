@@ -1,12 +1,12 @@
 # The Analytics Network - Guia de estilo de SQL
 
   - [Conceptos generales](#conceptos-generales)
-  - [Syntax](#syntax)
+  - [Sintaxis](#sintaxis)
     - [Joins](#joins)
     - [CTEs](#ctes)
   - [Naming](#naming)
-  - [Formatting](#formatting)
-  - [Credits](#credits)
+  - [Formateo](#formateo)
+  - [Creditos](#creditos)
 
 <br>
 

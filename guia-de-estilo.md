@@ -374,6 +374,13 @@ left join some_exceedingly_long_name on orders.some_exceedingly_long_name_id = s
 
 <br>
 
+
+#### Nombrar las foreign-keys haciendo referencia a la tabla donde es PK un sufijo de `id`.
+La idea es ser consistente y tener FK tales como "order_id", "customer_id", etc.
+
+<br>
+
+
 #### Columnas de fecha/hora:
   - Las columnas de fechas deben ser basadas en UTC y nombradas de la siguiente manera `<event>_date` o `<event>_dt`.
   - Aquellas que tengan una zona horaria especifica: `<event>_date_<timezone indicator>` (e.g. `order_date_et`).

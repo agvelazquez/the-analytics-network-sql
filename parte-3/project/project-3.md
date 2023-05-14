@@ -7,6 +7,7 @@ Luego en el ultimo paso así poder implementar una herramienta de BI.
 Debajo vamos a encontrar los pasos que le comunicamos a la empresa y que vamos a tener que realizar para poder hacer realidad el pedido. 
 
 <br>
+
 ### Parte 1 - Organización de nuestro repo
 
 El repositorio de git, que actualmente tenemos en Github, es el núcleo de nuestro código. Git nos permite trabajar colaborativamente y de tener versionados nuestros archivos, es decir tener guardado versiones anteriores, los cambios y la capacidad de recuperarlos. 

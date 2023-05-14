@@ -15,7 +15,7 @@ El repositorio de git, que actualmente tenemos en Github, es el núcleo de nuest
 Todas las empresas, de una u otra manera, usan git. Por eso nosotros también vamos a armar nuestro repositorio. 
 
 #### Estructura de carpetas 
-Para organizar la estructura del Data Warehouse (DW) en el repositorio, vamos a crear una carpeta llamada **"retail-data-warehouse"** dentro de la carpeta actual "project".  A su vez la carpeta va a tener la siguiente estructura de carpetas: 
+Para organizar la estructura del Data Warehouse (DW) en el repositorio, vamos a crear una carpeta llamada **retail-data-warehouse** dentro de la carpeta actual **project**.  A su vez la carpeta va a tener la siguiente estructura de carpetas: 
 
 - retail-data-warehouse 
     - stg
@@ -40,11 +40,11 @@ Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta 
         5. Order_line_sale
         6. Product_master
         7. Return_movements
-        8. store_master
-        9. super_store_count
+        8. Store_master
+        9. Super_store_count
         10. Supplier
         11. Employee
-4. Crear una base de datos que se llame "dev". Correr todos los scripts de ddl para tener la estructura en un ambiente que vamos a usar para el desarrollo y testeo de nuevas queries. No es es 
+4. Crear una base de datos que se llame "dev". Correr todos los scripts de ddl.sql para tener la estructura en un ambiente que vamos a usar para el desarrollo y testeo de nuevas queries. No es es necesario llenarlo de datos ni de crear nuevos scripts para la base de desarrollo. Los scripts son unicos y deben permanecer en el repositorio. 
 
 Nota: Git se utiliza en todos los trabajos de desarrollo de software y data, es importante que conozcas todas las funcionalidades, como manejarlo por consola y con algún proveedor como puede ser Github o Gitlab.
 
@@ -65,16 +65,21 @@ No es es necesario subir ningún dato, vamos a mantener la estructura vacía y m
 
 1. Crear un script de ddl para cada tabla dentro de fct y dim, con sus respectivas PK and FK en la creacion de tabla. 
       - Decidir en cada caso si es necesario crear una clave surrogada o no. 
-2. Editar el script de la tabla "employee" para que soporte un esquema de SDC (Slow changing dimension). para capturar cuales son los empleados activos y el periodo de duracion de cada empleado. 
+2. Editar el script de la tabla "employee" para que soporte un esquema de SDC (Slow changing dimension) cuyo objetivo debe ser capturar cuales son los empleados activos y el periodo de duracion de cada empleado. 
 3. Generar un ERD para el modelo dimensional creado con las tablas de hechos y de dimensiones, descargarlo en PDF y sumarlo al repositorio del proyecto.
 
 <br>
-### Parte 4 - Creación de los proceso de transformación
 
-Para nuestro poryecto vamos a realizar las transformaciones de datos dentro de stored procedures dentro del esquema etl. 
+### Parte 4 - Creación de los proceso de transformación (Work in Progress)
+
+Para nuestro poryecto vamos a realizar las transformaciones de datos dentro de stored procedures del esquema etl. Esta parte es la encargada de limpiar las datos crudos y realizar las transformaciones de negocio hasta la capa de analytics.
 1. Crear store procedures que generen backup de todas las tablas en esquema stg.
+2. Opcional - Descargar y configurar pgAgent para programar la corrida de los stored procedures. Nota: https://www.pgadmin.org/docs/pgadmin4/development/pgagent.html
+
+Nota: En esta parte no vamos a castear a los tipos de datos correspondientes por que ya los teniamos desde stg con el formato correcto, pero es una practica comun comenzar con todas las columnas tipo *varchar* y luego transformarlos para la siguiente capa. 
 
 <br>
+
 ### Parte 5 - Creación de la “Analytics layer”
 
 La capa de analytics es aquella que se va a conectar con nuestras herramientas de BI. 
@@ -82,25 +87,31 @@ La capa de analytics es aquella que se va a conectar con nuestras herramientas d
     - order_sale_line: (Va a ser la misma tabla que hicimos para el TP Integrador de la Parte 2)
     - return
     - inventory
-2. Crear los stored procedures para generar las tablas de analytics a partir del modelo dimensional. Los SP van a recrear la tabla cada cada vez que se corra. 
+2. Crear los stored procedures para generar las tablas de analytics a partir del modelo dimensional. Los SP van a recrear la tabla cada cada vez que se corra y va a contener toda la logica de cada tabla. 
 
 <br>
+
 ### Parte 6 - Logging
 
+Logging es la practica que nos permite guardar registro de los cambios que se van produciendo en el DW y es una forma de auditar 
 1. Crear una tabla de logging que indique cada vez que se realicen modificaciones a una tabla con la siguiente información: 
     - Tabla modificada (fct, dim o analytics)
     - Fecha de modificación.
     - Stored procedure responsable de la modificación. 
+    - Lineas insertadas/modificadas.
+    - usuario que corrio el stored procedures
 2. Crear un stored procedure que llene la tabla de log. 
-3. Poner el SP de logging en cada stored procedure creado.
+3. Poner el SP de logging en cada stored procedure creado en la parte de transformacion.
 
 <br>
+
 ### Parte 7 - Funciones
 
 1. Encapsular la lógica de conversion de moneda en una función y reutilizarla en los scripts donde sea necesario. 
 2. Que otra logica podemos transformar una funcion? La idea es encontrar transformaciones que se utilicen en varios lados. Si encontraste otros lados donde tiene sentido crear una funcion hacelo!
 
 <br>
+
 ### Parte 8 - Optimizacion de queries
 
 1. Que acciones podrias tomar para mejorar la performance de las queries que tenemos segun lo que vimos en clase? 
@@ -114,16 +125,19 @@ Algunas cosas a tener en cuenta son:
 - Mira ordenamientos innecesarios.
 
 <br>
+
 ### Parte 9 - Testing
 
 Cada proyecto tiene que tener como minimo testeos de nivel de agregacion del nivel de detalle. En este caso estamos cubiertos por que las PK y las FK son retricciones de unicidad y nulidad. En este punto no hay que hacer nada a menos que consideres agregar algun testeo extra de las PK y FK! 
 
 <br>
+
 ### Parte 10 - Otros
 
 1. Crear una Guia de estilo que va a a marcar los estándares de sintaxis para cualquier desarrollo del DW. (podes usar la misma que mostramos en clase o editarla!) 
 
 <br>
+
 ### Parte 11 - Opcional
 
 1. Opcional - Conectar la tabla de order_sale_line a PowerBI y realizar una visualización que resuma el estado de ventas y ganancias de la empresa.

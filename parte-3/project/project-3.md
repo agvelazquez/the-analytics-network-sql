@@ -47,9 +47,9 @@ Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta 
 
 Nota: Git se utiliza en todos los trabajos de desarrollo de software y data, es importante que conozcas todas las funcionalidades, como manejarlo por consola y con algún proveedor como puede ser Github o Gitlab.
 
-#### Parte 2 - Creación de un ambiente de desarrollo 
+### Parte 2 - Creación de un ambiente de desarrollo 
 
-Todos los proyectos de una u otra manera tienen un lugar de desarrollo, es decir un ambiente separado donde se puedan hacer cambios sin influir a los datos que ve el usuario final. Hay muchas formas de aplicar esto dependiendo en dónde estemos trabajando.  
+Todos los proyectos de una u otra manera tienen un lugar de desarrollo, es decir un ambiente separado donde se puedan hacer cambios sin influir a los datos que ve el usuario final. Hay muchas formas de aplicar esto dependiendo en dónde estemos trabajando.
 Nosotros vamos a montar el ambiente de desarrollo en una nueva base de datos. 
 
 1. Crear una base de datos que se llame "dev". Correr todos los scripts de ddl para tener la estructura en un ambiente que vamos a usar para el desarrollo y testeo de nuevas queries. 
@@ -57,7 +57,7 @@ Nosotros vamos a montar el ambiente de desarrollo en una nueva base de datos.
 No es es necesario subir ningún dato, vamos a mantener la estructura vacía y manejarnos en la base de datos inicial. Este ejercicio es solamente para mostrar la existencia de un ambiente de desarrollo, que es obligatoria en todo proyecto grande. 
 
 
-#### Parte 3 - Creación de un modelo dimensional
+### Parte 3 - Creación de un modelo dimensional
 
 1. Crear un script de ddl para cada tabla dentro de fct y dim, con sus respectivas PK and FK en la creacion de tabla. 
       - Decidir en cada caso si es necesario crear una clave surrogada o no. 
@@ -65,39 +65,46 @@ No es es necesario subir ningún dato, vamos a mantener la estructura vacía y m
 3. Generar un ERD para el modelo dimensional creado con las tablas de hechos y de dimensiones, descargarlo en PDF y sumarlo al repositorio del proyecto.
 
 
-#### Parte 4 - Creación de los proceso de transformación
+### Parte 4 - Creación de los proceso de transformación
 
 1. (WIP) Crear store procedures que generen backup de todas las tablas en esquema stg.
 
 
-#### Parte 5 - Logging
-
-1. Crear una tabla de logging que indique cada vez que se realicen modificaciones a una tabla con la siguiente información: 
-    - Tabla modificada
-    - Fecha de modificación.
-    - Stored procedure responsable de la modificación. 
-
-#### Parte 6 - Creación de la “Analytics layer”
+### Parte 5 - Creación de la “Analytics layer”
 
 La capa de analytics es aquella que se va a conectar con nuestras herramientas de BI. 
-1. Crear 4 tablas de analytics: 
+1. Crear tres tablas de analytics: 
     - order_sale_line: (Va a ser la misma tabla que hicimos para el TP Integrador de la Parte 2)
     - return
     - inventory
+2. Crear los stored procedures para generar las tablas de analytics a partir del modelo dimensional. Los SP van a recrear la tabla cada cada vez que se corra. 
 
-#### Parte 7 - Funciones
+### Parte 6 - Logging
+
+1. Crear una tabla de logging que indique cada vez que se realicen modificaciones a una tabla con la siguiente información: 
+    - Tabla modificada (fct, dim o analytics)
+    - Fecha de modificación.
+    - Stored procedure responsable de la modificación. 
+2. Crear un stored procedure que llene la tabla de log. 
+3. Poner el SP de logging en cada stored procedure creado.
+
+### Parte 7 - Funciones
 
 1. Encapsular la lógica de conversion de moneda en una función y reutilizarla en los scripts donde sea necesario. 
 2. Que otra logica podemos transformar una funcion? La idea es encontrar transformaciones que se utilicen en varios lados. Si encontraste otros lados donde tiene sentido crear una funcion hacelo!
 
-#### Parte 8 - Optimizacion de queries
+### Parte 8 - Optimizacion de queries
 
 
-#### Parte 9 - Otros
+### Parte 9 - Testing
+
+Cada proyecto tiene que tener como minimo testeos de nivel de agregacion del nivel de detalle. En este caso estamos cubiertos por que las PK y las FK son retricciones de unicidad y nulidad. En este punto no hay que hacer nada a menos que consideres agregar algun testeo extra de las PK y FK! 
+
+### Parte 10 - Otros
 
 1. Crear una Guia de estilo que va a a marcar los estándares de sintaxis para cualquier desarrollo del DW. (podes usar la misma que mostramos en clase o editarla!) 
 
-#### Parte 10 - Opcional
+### Parte 11 - Opcional
 
-1. Conectar la tabla de order_sale_line a PowerBI y realizar una visualización que resuma el estado de ventas y ganancias de la empresa.
+1. Opcional - Conectar la tabla de order_sale_line a PowerBI y realizar una visualización que resuma el estado de ventas y ganancias de la empresa.
 

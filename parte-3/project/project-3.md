@@ -84,9 +84,14 @@ Nota: En esta parte no vamos a castear a los tipos de datos correspondientes por
 
 La capa de analytics es aquella que se va a conectar con nuestras herramientas de BI. 
 1. Crear tres tablas de analytics: 
-    - order_sale_line: (Va a ser la misma tabla que hicimos para el TP Integrador de la Parte 2)
+    - order_sale_line 
+        - Nota: Va a ser la misma tabla que hicimos para el TP Integrador de la Parte 2
     - return
+        - El objetivo es ver las ordenes de devoluciones con las dimensiones/atributos del producto retornado y ademas la tienda y sus atributas en la cual fue originalmente comprado el producto (de la orden de venta) junto con el valor de venta del producto retornado (es nuestra manera de cuantificar el valor de la devolucion)
+        - Nota: Obviamente valores de devolucion deben estar en moneda original y moneda comun. 
+        - Nota2: La tabla de retornors indica movimientos del item una vez que viene del cliente a nuestra tienda, cuidado con repetir valores, nosotros queremos entender unciamente las ordenes-productos retornados no los movimientos que tuvo cada retorno.
     - inventory
+       - El objetivo es ver el historico del inventario promedio por dia, con todas las dimensiones/atributos de producto (categoria, descripcion, etc.), dimensiones de la tienda (pais, nombre, etc) y el costo de los productos.
 2. Crear los stored procedures para generar las tablas de analytics a partir del modelo dimensional. Los SP van a recrear la tabla cada cada vez que se corra y va a contener toda la logica de cada tabla. 
 
 <br>

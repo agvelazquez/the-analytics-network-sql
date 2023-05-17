@@ -1,4 +1,4 @@
-## Ejercicio Integrador Parte 3 (WORK IN PROGRESS)
+## Ejercicio Integrador Parte 3
 
 
 La empresa en la cual venimos trabajando le gusto lo que hicimos hasta ahora y quiere que podamos escalar los resultados para que se implemente una herramienta de BI - Business Intelligent y pueda recibir los datos que la empresa genera día a día. Para eso le comentamos que nuestra solución es generar un Data Warehouse junto con un proceso de ETL para tener una infraestructura que permite ampliar mas casos de uso y ademas ingerir datos de forma sistemica.
@@ -70,7 +70,7 @@ No es es necesario subir ningún dato, vamos a mantener la estructura vacía y m
 
 <br>
 
-### Parte 4 - Creación de los proceso de transformación (Work in Progress)
+### Parte 4 - Creación de los proceso de transformación
 
 Para nuestro poryecto vamos a realizar las transformaciones de datos dentro de stored procedures del esquema etl. Esta parte es la encargada de limpiar las datos crudos y realizar las transformaciones de negocio hasta la capa de analytics.
 

@@ -93,6 +93,7 @@ La capa de analytics es aquella que se va a conectar con nuestras herramientas d
     - inventory
        - El objetivo es ver el historico del inventario promedio por dia, con todas las dimensiones/atributos de producto (categoria, descripcion, etc.), dimensiones de la tienda (pais, nombre, etc) y el costo de los productos.
 2. Crear los stored procedures para generar las tablas de analytics a partir del modelo dimensional. Los SP van a recrear la tabla cada cada vez que se corra y va a contener toda la logica de cada tabla. 
+    - El proceso de creacion de las tablas de analytics va a ser del tipo "truncate and create" ya que estas tablas son las que mayores modificaciones van a tener al codigo dado que las logicas del negocio van mutando constantement o requieren nuevos features.
 
 <br>
 

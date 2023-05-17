@@ -73,6 +73,8 @@ No es es necesario subir ningún dato, vamos a mantener la estructura vacía y m
 ### Parte 4 - Creación de los proceso de transformación (Work in Progress)
 
 Para nuestro poryecto vamos a realizar las transformaciones de datos dentro de stored procedures del esquema etl. Esta parte es la encargada de limpiar las datos crudos y realizar las transformaciones de negocio hasta la capa de analytics.
+
+stg -> Modelo dimensional (fct/dim)
 1. Crear store procedures que generen backup de todas las tablas en esquema stg.
 2. Opcional - Descargar y configurar pgAgent para programar la corrida de los stored procedures. Nota: https://www.pgadmin.org/docs/pgadmin4/development/pgagent.html
 
@@ -99,22 +101,22 @@ La capa de analytics es aquella que se va a conectar con nuestras herramientas d
 
 ### Parte 6 - Logging
 
-Logging es la practica que nos permite guardar registro de los cambios que se van produciendo en el DW y es una forma de auditar 
+Logging es la practica que nos permite guardar registro de los cambios que se van produciendo en el DW y es una forma de auditar en caso de haya errores en los datos. 
 1. Crear una tabla de logging que indique cada vez que se realicen modificaciones a una tabla con la siguiente información: 
     - Tabla modificada (fct, dim o analytics)
     - Fecha de modificación.
     - Stored procedure responsable de la modificación. 
     - Lineas insertadas/modificadas.
-    - usuario que corrio el stored procedures
+    - Usuario que corrio el stored procedures
 2. Crear un stored procedure que llene la tabla de log. 
-3. Poner el SP de logging en cada stored procedure creado en la parte de transformacion.
+3. Poner el "call" del SP de logging en cada stored procedure creado en la parte de transformacion de las tablas stg a dim y fact y de las tablas de analytics.
 
 <br>
 
 ### Parte 7 - Funciones
 
 1. Encapsular la lógica de conversion de moneda en una función y reutilizarla en los scripts donde sea necesario. 
-2. Que otra logica podemos transformar una funcion? La idea es encontrar transformaciones que se utilicen en varios lados. Si encontraste otros lados donde tiene sentido crear una funcion hacelo!
+2. (Opcional) Que otra logica podemos encapsular en una funcion? La idea es encontrar transformaciones que se repitan en varios lados. Si encontraste y crees que tiene sentido crear una funcion, hacelo!
 
 <br>
 

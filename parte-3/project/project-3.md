@@ -30,7 +30,7 @@ Para organizar la estructura del Data Warehouse (DW) en el repositorio, vamos a 
 Dentro de cada carpeta vamos a poner un script por cada "modelo" y cada carpeta representa un esquema del DW. Este paso lo podes hacer una vez que tenes al menos un archivo por carpeta o podes realizarlo al principio y colocando un archivo vacío llamado "placeholder.md" que luego podes borrar. 
 
 1. Crear las carpetas mencionadas previamente.
-2. Vamos a reciclar el script de ddl.sql que utilizamos al principio y sumarle los scripts de "returns", "supplier" y "employee" para armar la estructura de nuestra carpeta stg. Crear POR CADA TABLA en stg un archivo en la carpeta stg con el ddl de cada tabla cuyo nombre sera el nombre de la tabla. Ejemplo: "cost.sql". No es necesario correrlos nuevamente, así reutilizamos lo que ya tenemos. 
+2. Vamos a reciclar el script de ddl.sql que utilizamos al principio y sumarle los scripts de "returns", "supplier", "employee" y calendario para armar la estructura de nuestra carpeta stg. Crear POR CADA TABLA en stg un archivo en la carpeta stg con el ddl de cada tabla cuyo nombre sera el nombre de la tabla. Ejemplo: "cost.sql". No es necesario correrlos nuevamente, así reutilizamos lo que ya tenemos. 
 3. Limpiar cualquier otra tabla (si existiese) que nos haya quedado de las partes anteriores que no corresponda al Data Warehouse. 
     1. Las tablas que deberíamos tener en staging son las siguientes: 
         1. Cost
@@ -75,8 +75,20 @@ No es es necesario subir ningún dato, vamos a mantener la estructura vacía y m
 Para nuestro poryecto vamos a realizar las transformaciones de datos dentro de stored procedures del esquema etl. Esta parte es la encargada de limpiar las datos crudos y realizar las transformaciones de negocio hasta la capa de analytics.
 
 stg -> Modelo dimensional (fct/dim)
+1. Por default todas las tablas van a seguir el paradigma de truncate and insert, a menos que se indique lo contrario. 
+2. El objetivo de este paso es que las tablas fact/dim queden "limpias" y validadas y listas para ser usadas para analisis. Por lo tanto, van a requerir que hagas los cambios necesarios que ya vimos en la parte 1 y 2 para que queden lo mas completa posibles. Te menciono algunos como ejemplo pero la lista puede no esta completa: 
+    - Agregar columnas: ejemplo marca/"brand" en la tabla de producto. 
+    - Las tablas store_count de ambos sistemas deben centrarlizarse en una tabla. 
+    - Limpiar la tabla de supplier dejando uno por producto. 
+    - Nombre de columnas:  cambiar si considerar que no esta claro. Las PK suelen llamarse "id" y las FK "tabla_id" ejemplo: "customer_id"
+    - Tipo de dato: Cambiar el tipo de dato en caso que no sea correcto. 
+3. Las tablas de "employee" y "cost" van a usar un modelo de actulizacion tipo "upsert". 
+4. La tabla de ventas (order_line_sale) y la tabla de inventario va a seguir un modelo incremental basado en la fecha. 
+
+
+Opcional
 1. Crear store procedures que generen backup de todas las tablas en esquema stg.
-2. Opcional - Descargar y configurar pgAgent para programar la corrida de los stored procedures. Nota: https://www.pgadmin.org/docs/pgadmin4/development/pgagent.html
+2. Descargar y configurar pgAgent para programar la corrida de los stored procedures. Nota: https://www.pgadmin.org/docs/pgadmin4/development/pgagent.html
 
 Nota: En esta parte no vamos a castear a los tipos de datos correspondientes por que ya los teniamos desde stg con el formato correcto, pero es una practica comun comenzar con todas las columnas tipo *varchar* y luego transformarlos para la siguiente capa. 
 

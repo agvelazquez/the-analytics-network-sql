@@ -75,17 +75,22 @@ No es es necesario subir ningún dato, vamos a mantener la estructura vacía y m
 Para nuestro poryecto vamos a realizar las transformaciones de datos dentro de stored procedures del esquema etl. Esta parte es la encargada de limpiar las datos crudos y realizar las transformaciones de negocio hasta la capa de analytics.
 
 stg -> Modelo dimensional (fct/dim)
-1. Por default todas las tablas van a seguir el paradigma de truncate and insert, a menos que se indique lo contrario. 
-2. El objetivo de este paso es que las tablas fact/dim queden "limpias" y validadas y listas para ser usadas para analisis. Por lo tanto, van a requerir que hagas los cambios necesarios que ya vimos en la parte 1 y 2 para que queden lo mas completa posibles. Te menciono algunos como ejemplo pero la lista puede no esta completa: 
+1. Crear un backup de las ultimas versiones de todas las tablas stg en el nuevo schema bkp. La idea es que los datos puedan ser recuperados rapidamente en caso de errores/fallas en los scripts de transformacion.
+2. Por default todas las tablas van a seguir el paradigma de truncate and insert, a menos que se indique lo contrario. 
+3. El objetivo de este paso es que las tablas fact/dim queden "limpias" y validadas y listas para ser usadas para analisis. Por lo tanto, van a requerir que hagas los cambios necesarios que ya vimos en la parte 1 y 2 para que queden lo mas completa posibles. Te menciono algunos como ejemplo pero la lista puede no esta completa: 
     - Agregar columnas: ejemplo marca/"brand" en la tabla de producto. 
     - Las tablas store_count de ambos sistemas deben centrarlizarse en una tabla. 
     - Limpiar la tabla de supplier dejando uno por producto. 
     - Nombre de columnas:  cambiar si considerar que no esta claro. Las PK suelen llamarse "id" y las FK "tabla_id" ejemplo: "customer_id"
     - Tipo de dato: Cambiar el tipo de dato en caso que no sea correcto. 
-3. Las tablas de "employee" y "cost" van a usar un modelo de actulizacion tipo "upsert". 
+4. Las tablas de "employee" y "cost" van a usar un modelo de actulizacion tipo "upsert". 
     - En caso de no se cumpla la condicion de FK no incluir esos SKUs. Como encadenarias el proceso?
 5. La tabla de ventas (order_line_sale) y la tabla de inventario va a seguir un modelo incremental basado en la fecha. 
 
+Importante; Una vez creado el script de transformacion, muevan los datos originales con los que vinimos trabajando a el modelo dimensional y luego deben agregar los nuevos datos, limpiando los de stg (pueden crear un backup de todas las tablas stg para recuperarlas facilmente). La version final de las tablas dim/fact van a tener en cuanto a datos tres opciones: 
+- Datos nuevos, en caso de que se haya enviado un nuevo archivo. 
+- Los mismos datos, es el caso donde no hay cambios y no se envio un archivo nuevo. 
+- Combinacion de datos nuevos y viejos, para el caso donde se pide insertar/sobrescribir nuevos datos. 
 
 Opcional
 1. Crear store procedures que generen backup de todas las tablas en esquema stg.

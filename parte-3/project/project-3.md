@@ -85,7 +85,7 @@ stg -> Modelo dimensional (fct/dim)
     - Tipo de dato: Cambiar el tipo de dato en caso que no sea correcto. 
 4. Las tablas de "employee" y "cost" van a usar un modelo de actulizacion tipo "upsert". 
     - En caso de no se cumpla la condicion de FK no incluir esos SKUs. Como encadenarias el proceso?
-5. La tabla de ventas (order_line_sale) y la tabla de inventario va a seguir un modelo incremental basado en la fecha. 
+6. La tabla de ventas (order_line_sale) y la tabla de inventario va a seguir un modelo incremental basado en la fecha. 
 
 Importante; Una vez creado el script de transformacion, muevan los datos originales con los que vinimos trabajando a el modelo dimensional y luego deben agregar los nuevos datos, limpiando los de stg (pueden crear un backup de todas las tablas stg para recuperarlas facilmente). La version final de las tablas dim/fact van a tener en cuanto a datos tres opciones: 
 - Datos nuevos, en caso de que se haya enviado un nuevo archivo. 

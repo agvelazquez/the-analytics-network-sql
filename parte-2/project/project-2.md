@@ -21,7 +21,6 @@ y que se pueda calcular las siguiente metricas:
 - Ventas netas (inluye ventas y descuentos)
 - Valor final pagado (incluye ventas, descuentos, impuestos y creditos)
 - ROI
-- Days on hand
 - Costos
 - Margen bruto (gross margin)
 - AGM (adjusted gross margin)

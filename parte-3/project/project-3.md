@@ -83,7 +83,7 @@ stg -> Modelo dimensional (fct/dim)
     - Limpiar la tabla de supplier dejando uno por producto. 
     - Nombre de columnas:  cambiar si considerar que no esta claro. Las PK suelen llamarse "id" y las FK "tabla_id" ejemplo: "customer_id"
     - Tipo de dato: Cambiar el tipo de dato en caso que no sea correcto. 
-4. Las tablas de "employee" y "cost" van a usar un modelo de actulizacion tipo "upsert". 
+4. Las tablas de "employee", "cost" y "product master" van a usar un modelo de actulizacion tipo "upsert". 
     - En caso de no se cumpla la condicion de FK no incluir esos SKUs. Como encadenarias el proceso?
 6. La tabla de ventas (order_line_sale) y la tabla de inventario va a seguir un modelo incremental basado en la fecha. 
 

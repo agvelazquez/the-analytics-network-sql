@@ -1,4 +1,4 @@
-## Ejercicio Integrador Parte 3
+## Objetivos Parte 3
 
 
 La empresa en la cual venimos trabajando le gusto lo que hicimos hasta ahora y quiere que podamos escalar los resultados para que se implemente una herramienta de BI - Business Intelligent y pueda recibir los datos que la empresa genera día a día. Para eso le comentamos que nuestra solución es generar un Data Warehouse junto con un proceso de ETL para tener una infraestructura que permite ampliar mas casos de uso y ademas ingerir datos de forma sistemica.

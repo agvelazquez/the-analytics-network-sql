@@ -1,26 +1,6 @@
 # Homework
 
-Bienvenidos a la seccion de tarea para el hogar de la parte 1. Es recomendable realizar estas preguntas durante el transcurso 
-de la semana para poder seguir el ritmo a las clases.
-
-
-Cada pregunta sera respondida con una query que devuelva los datos necesarios para reponder la misma. Muchas de las preguntas pueden tener 
-mas de una manera de ser respondidas y en otras es posible que debas aplicar tu criteria para decidir cual es la mejor opcion. 
-
-Ejemplo: 
-
-Pregunta: Cuantas tiendas estan ubicadas en Argentina? 
-
-Respuesta: ``` select count(distinct codigo_tienda) from tiendas where pais = 'Argentina'``` 
-
-Como la tabla tiendas tiene valores unicos por tienda otra respuesta puede ser:
-
-Respuesta 2: ``` select count(codigo_tienda) from tiendas where pais = 'Argentina'``` 
-
-Ambas respuestas van a ser consideradas validas.
-
-
-## Clase 1
+## Semana 1 - Parte A
 
 1. Mostrar todos los productos dentro de la categoria electro junto con todos los detalles. 
 2. Cuales son los producto producidos en China? 
@@ -36,7 +16,7 @@ Ambas respuestas van a ser consideradas validas.
 12. Mostrar todas las lineas de venta que que hayan sido vendidas entre 1 de Octubre de 2022 y 10 de Noviembre de 2022.
 
 
-## Clase 2
+## Semana 1 - Parte B
 
 1. Cuales son los paises donde la empresa tiene tiendas? 
 2. Cuantos productos por subcategoria tiene disponible para la venta? 
@@ -54,7 +34,7 @@ Ambas respuestas van a ser consideradas validas.
 14. Cual es la tasa de impuestos que se pago por cada orden de venta?
 
 
-## Clase 3
+## Semana 2 - Parte A
 
 1. Mostrar nombre y codigo de producto, categoria y color para todos los productos de la marca Philips y Samsung, mostrando la leyenda "Unknown" cuando no hay un color disponible
 2. Calcular las ventas brutas y los impuestos pagados por pais y provincia en la moneda correspondiente.
@@ -70,7 +50,7 @@ Ambas respuestas van a ser consideradas validas.
 
 
 
-## Clase 4 
+## Semana 2 - Parte B
 1. Crear un backup de la tabla product_master. Utilizar un esquema llamada "bkp" y agregar un prefijo al nombre de la tabla con la fecha del backup en forma de numero entero.
 2. Hacer un update a la nueva tabla (creada en el punto anterior) de product_master agregando la leyendo "N/A" para los valores null de material y color. Pueden utilizarse dos sentencias.
 3. Hacer un update a la tabla del punto anterior, actualizando la columa "is_active", desactivando todos los productos en la subsubcategoria "Control Remoto". 

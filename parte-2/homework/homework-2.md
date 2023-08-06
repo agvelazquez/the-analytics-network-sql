@@ -1,14 +1,6 @@
 # Homework
 
-Bienvenidos a la seccion de tarea para el hogar de la parte 2! 
-Te recomiendo realizar estas preguntas durante el transcurso de la semana para poder seguir el ritmo a las clases.
-
-Cada pregunta sera respondida con una query que devuelva los datos necesarios para reponder la misma. Muchas de las preguntas pueden tener 
-mas de una manera de ser respondidas y es posible que debas aplicar tu criterio para decidir cual es la mejor opcion. 
-
-Si ya forkeaste el repositorio, lo que podes hacer es copiar este archivo clickeando en "Raw" y luego Ctrl + A. Luego podes crear un archivo llamado "homework.md en tu repositorio con el texto copiado.
-
-## Clase 6
+## Semana 3 - Parte A
 
 1. Crear una vista con el resultado del ejercicio de la Parte 1 - Clase 2 - Ejercicio 10, donde unimos la cantidad de gente que ingresa a tienda usando los dos sistemas. 
 2. Recibimos otro archivo con ingresos a tiendas de meses anteriores. Ingestar el archivo y agregarlo a la vista del ejercicio anterior (Ejercicio 1 Clase 6). Cual hubiese sido la diferencia si hubiesemos tenido una tabla? (contestar la ultima pregunta con un texto escrito en forma de comentario)
@@ -23,7 +15,7 @@ Si ya forkeaste el repositorio, lo que podes hacer es copiar este archivo clicke
 	- Explicar brevemente (con palabras escrito tipo comentario) que es lo que sucedia. 
 
 
-## Clase 7
+## Semana 3 - Parte B
 
 1. Calcular el porcentaje de valores null de la tabla stg.order_line_sale para la columna creditos y descuentos. (porcentaje de nulls
 en cada columna)
@@ -46,7 +38,7 @@ en cada columna)
  		-  El Promedio diario Unidades vendidas ultimos 7 dias tiene que calcularse para cada dia.
 
 
-## Clase 8 
+## Semana 4 - Parte A
 
 1. Realizar el Ejercicio 6 de la clase 6 donde calculabamos la contribucion de las ventas brutas de cada producto utilizando una window function. 
 2. La regla de pareto nos dice que aproximadamente un 20% de los productos generan un 80% de las ventas. Armar una vista a nivel sku donde se pueda identificar por orden de contribucion, ese 20% aproximado de SKU mas importantes. (Nota: En este ejercicios estamos construyendo una tabla que muestra la regla de Pareto)
@@ -73,7 +65,7 @@ en cada columna)
 	- Nota: En general una tabla date es creada para muchos años mas (minimo 10), por el momento nos ahorramos ese paso y de la creacion de feriados.
 
 
-## Clase 9
+## Semana 5 - Parte B
 
 1. Calcular el crecimiento de ventas por tienda mes a mes, con el valor nominal y el valor % de crecimiento. Utilizar self join. 
 2. Hacer un update a la tabla de product_master agregando una columna llamada "marca", con la marca de cada producto con la primer letra en mayuscula.  Sabemos que las marcas que tenemos son: Levi's, Tommy Hilfiger, Samsung, Phillips, Acer, JBL y Motorola. En caso de no encontrarse en la lista usar 'Unknown'.

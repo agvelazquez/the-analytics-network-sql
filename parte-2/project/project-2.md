@@ -1,4 +1,4 @@
-## Ejercicio Integrador Parte 2
+## Objetivos Parte 2
 
 
 Uno de los proyectos que viene trabajando nuestra empresa es de mejorar la visibilidad que le damos a nuestros principales KPIs que calculamos durante la Parte 1. Para eso, uno de los requisitos futuros va a ser crear una serie de dashboards en el cual podramos investigar cada metrica, su progresion en el tiempo y para diferentes cortes de los datos (Ejemplo: categoria, tienda, mes, producto, etc.). Para lograr esto, el primer objetivo es crear una tabla donde se pueda obtener todo esto en un mismo lugar. 

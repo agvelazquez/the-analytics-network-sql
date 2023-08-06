@@ -7,6 +7,8 @@ Por cada KPI listado vamos a tener que generar al menos una query (pueden ser ma
 Todos los valores monetarios deben ser calculados en dolares usando el tipo de cambio promedio mensual. 
 
 El objetivo no es solo encontrar la query que responda la metrica sino entender que datos necesitamos, que es lo que significa y como armar el KPI
+
+
 General 
 - Ventas brutas, netas y margen
 - Margen por categoria de producto 
@@ -26,5 +28,3 @@ Supply Chain
 
 Tiendas
 - Ratio de conversion. Cantidad de ordenes generadas / Cantidad de gente que entra
-
-Por otro lado tambien necesitamos crear y subir a nuestra DB la tabla "return_movements" para poder utilizarla en la segunda parte.

@@ -28,12 +28,3 @@ Tiendas
 - Ratio de conversion. Cantidad de ordenes generadas / Cantidad de gente que entra
 
 Por otro lado tambien necesitamos crear y subir a nuestra DB la tabla "return_movements" para poder utilizarla en la segunda parte.
-
-## Preguntas de entrevistas
-
-1. Como encuentro duplicados en una tabla. Dar un ejemplo mostrando duplicados de la columna orden en la tabla de ventas.
-2. Como elimino duplicados?
-3. Cual es la diferencia entre UNION y UNION ALL.
-4. Como encuentro registros en una tabla que no estan en otra tabla.
-    - Para probar podes crear dos tablas con una unica columna id que tengan valores: Tabla 1: 1,2,3,4 Tabla 2: 3,4,5,6
-6. Cual es la diferencia entre INNER JOIN y LEFT JOIN. (podes usar la tabla anterior)

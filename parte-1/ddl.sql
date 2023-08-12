@@ -115,7 +115,7 @@ DROP TABLE IF EXISTS stg.order_line_sale;
     
 CREATE TABLE stg.order_line_sale
                  (
-                              order_number      VARCHAR(10)
+                              order_number      VARCHAR(255)
                             , product   VARCHAR(10)
                             , store     SMALLINT
                             , date      date

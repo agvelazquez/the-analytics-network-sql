@@ -1,14 +1,14 @@
 
 -- General 
--- - Ventas brutas, netas y margen
+-- - Ventas brutas, netas y margen (USD)
 
--- - Margen por categoria de producto 
+-- - Margen por categoria de producto (USD)
 
--- - ROI por categoria de producto. ROI = ventas netas / Valor promedio de inventario 
+-- - ROI por categoria de producto. ROI = ventas netas / Valor promedio de inventario (USD)
 
--- - AOV (Average order value), valor promedio de la orden. 
+-- - AOV (Average order value), valor promedio de la orden. (USD)
 
--- Contabilidad
+-- Contabilidad (USD)
 -- - Impuestos pagados
 
 -- - Tasa de impuesto. Impuestos / Ventas netas 
@@ -17,7 +17,7 @@
 
 -- - Valor pagado final por order de linea. Valor pagado: Venta - descuento + impuesto - credito
 
--- Supply Chain
+-- Supply Chain (USD)
 -- - Costo de inventario promedio por tienda
 
 -- - Costo del stock de productos que no se vendieron por tienda

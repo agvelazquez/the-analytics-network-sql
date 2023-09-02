@@ -1,4 +1,4 @@
--- Table: stg.cost
+-- Table: dim.cost
 
 DROP TABLE IF EXISTS dim.cost;
 
@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS dim.cost
     cost_usd numeric,
 	constraint fk_product_id_cost
 		foreign key (product_id)
-		references dim.product_master(codigo_producto)
-)
+		references dim.product_master(product_code)
+);

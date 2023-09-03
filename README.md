@@ -31,6 +31,7 @@ En el proyecto final se exponene diferentes preguntas de negocio donde se tienen
 
 Podes revisar las respuestas aqui: 
 - [Homework](parte-1/homework)
+- [Desafio Entrevista Tecnica](parte-1/sql-interview)
 - [Proyecto](parte-1/project)
 
 
@@ -42,6 +43,7 @@ En el proyecto final se exponene diferentes preguntas de negocio donde se tienen
 
 Podes revisar las respuestas aqui: 
 - [Homework](parte-2/homework)
+- [Desafio Entrevista Tecnica](parte-2/sql-interview)
 - [Proyecto](parte-2/project)
 
 
@@ -52,13 +54,13 @@ La ultima parte montamos un Data Warehouse/OLAP DB, creamos stored procedures y 
 En el proyecto final se exponene diferentes preguntas de negocio donde se tienen que elaborar KPIs para responderlas.
 
 Podes revisar las respuestas aqui: 
-- [Homework](parte-3/homework)
+- [Desafio Entrevista Tecnica](parte-3/sql-interview)
 - [Proyecto](parte-3/project)
 
 
 ## Sobre nosotros 👋🏼
 
-[The Analytics Network]([https://sqldeceroamessi.carrd.co/](https://theanalyticsnetwork.tech/)) es una comunidad cuyo objetivo es crear profesionales de alta performance con un excelente nivel tecnico y de interpretacion de problemas en el area de datos.
+[The Analytics Network]([[https://sqldeceroamessi.carrd.co/](https://theanalyticsnetwork.tech/)]) es una comunidad cuyo objetivo es crear profesionales de alta performance con un excelente nivel tecnico y de interpretacion de problemas en el area de datos.
 
 ## Referencias 
 

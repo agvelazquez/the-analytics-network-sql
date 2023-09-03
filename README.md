@@ -60,7 +60,7 @@ Podes revisar las respuestas aqui:
 
 ## Sobre nosotros 👋🏼
 
-[The Analytics Network]([[https://sqldeceroamessi.carrd.co/](https://theanalyticsnetwork.tech/)]) es una comunidad cuyo objetivo es crear profesionales de alta performance con un excelente nivel tecnico y de interpretacion de problemas en el area de datos.
+[The Analytics Network](https://theanalyticsnetwork.tech/) es una comunidad cuyo objetivo es crear profesionales de alta performance con un excelente nivel tecnico y de interpretacion de problemas en el area de datos.
 
 ## Referencias 
 

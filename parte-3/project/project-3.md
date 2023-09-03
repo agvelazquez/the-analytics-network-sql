@@ -158,7 +158,7 @@ Para nuestro poryecto vamos a realizar las transformaciones de datos dentro de `
 
 ---
 
-La capa de analytics es aquella que se va a conectar con nuestras herramientas de BI.
+La capa de analytics es aquella que se va a conectar con nuestras herramientas de BI. Para esto vamos a crear un nuevo stored procedure donde vamos a escribir la logica de cada script con un modelo del tipo truncate and select into. En la Parte Testing, mas adelante, vamos a agregarle algunas comprobaciones.
 
 1. Crear tres tablas de analytics:
     - `analytics.order_sale_line`

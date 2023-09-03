@@ -19,7 +19,7 @@
 ***
 
 ## Descripcion
-Repositorio del curso de programacion en SQL: SQL de cero a Messi. El curso tiene una duracion de 18 clases desde un nivel basico con los primeras queries hasta un nivel avanzado donde se evaluan queries complejas, proyectos de modelado y optimizacion. Para mas detalles ver el Plan de Estudio en el root del repositorio.
+Repositorio del curso de programacion en SQL: SQL de cero a Messi. El curso tiene una duracion de 10 semanas desde un nivel basico con los primeras queries hasta un nivel avanzado donde se evaluan queries complejas, proyectos de modelado y optimizacion. Para mas detalles ver el Plan de Estudio en el root del repositorio.
 
 
 
@@ -31,7 +31,7 @@ En el proyecto final se exponene diferentes preguntas de negocio donde se tienen
 
 Podes revisar las respuestas aqui: 
 - [Homework](parte-1/homework)
-- [Proyecto Final](parte-1/project)
+- [Proyecto](parte-1/project)
 
 
 ## Desafios Parte 2
@@ -42,23 +42,23 @@ En el proyecto final se exponene diferentes preguntas de negocio donde se tienen
 
 Podes revisar las respuestas aqui: 
 - [Homework](parte-2/homework)
-- [Proyecto Final](parte-2/project)
+- [Proyecto](parte-2/project)
 
 
 ## Desafios Parte 3
 
-La ultima parte montamos un Data Warehouse y un Data Lake, generamos ambientes de produccion y testeo junto con una introduccion al modelo referencial. Por otro lado evaluamos el plan de ejecucion para entener como mejorar la performances de nuestras queries. 
+La ultima parte montamos un Data Warehouse/OLAP DB, creamos stored procedures y diferentes capas de agregacion de tablas, generamos ambientes de produccion y testeo junto con una introduccion al modelo dimensional. Por otro lado evaluamos el plan de ejecucion para entener como mejorar la performances de nuestras queries. 
 
 En el proyecto final se exponene diferentes preguntas de negocio donde se tienen que elaborar KPIs para responderlas.
 
 Podes revisar las respuestas aqui: 
 - [Homework](parte-3/homework)
-- [Proyecto Final](parte-3/project)
+- [Proyecto](parte-3/project)
 
 
 ## Sobre nosotros 👋🏼
 
-[The Analytics Network](https://sqldeceroamessi.carrd.co/) es una comunidad cuyo objetivo es crear profesionales de alta performance con un excelente nivel tecnico y de interpretacion de problemas en el area de datos.
+[The Analytics Network]([https://sqldeceroamessi.carrd.co/](https://theanalyticsnetwork.tech/)) es una comunidad cuyo objetivo es crear profesionales de alta performance con un excelente nivel tecnico y de interpretacion de problemas en el area de datos.
 
 ## Referencias 
 

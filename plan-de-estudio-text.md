@@ -2,8 +2,8 @@
 
 **Hosted by  Agus Velazquez** 
 
-[LinkedIn Profile](https://www.linkedin.com/in/velazquezagustin/)
-[The Analytics Network](https://theanalyticsnetwork.tech/)
+- [LinkedIn Profile](https://www.linkedin.com/in/velazquezagustin/)
+- [The Analytics Network](https://theanalyticsnetwork.tech/)
 
 - **Duracion**: 10 semanas
 

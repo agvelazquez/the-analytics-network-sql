@@ -10,3 +10,4 @@ CREATE TABLE IF NOT EXISTS dim.cost
 		foreign key (product_id)
 		references dim.product_master(product_code)
 );
+

@@ -162,7 +162,8 @@ La capa de analytics es aquella que se va a conectar con nuestras herramientas d
 
 1. Crear tres tablas de analytics:
     - `analytics.order_sale_line`
-        - Nota: Va a ser la misma tabla que hicimos para el TP Integrador de la Parte 2.
+        - Va a ser la misma tabla que hicimos para el TP Integrador de la Parte 2.
+        - Cambiar las fuentes de stg a el nuevo modelo dimensional.
     - `analytics.return`
         - El objetivo es ver las ordenes de devoluciones con las dimensiones/atributos del producto retornado y de la tienda en la cual fue originalmente comprado el producto (de la orden de venta) junto con el valor de venta del producto retornado (es nuestra manera de cuantificar el valor de la devolucion)
         - Nota:

@@ -92,8 +92,6 @@ CREATE TABLE stg.store_master
                             , name         VARCHAR(255)
                             , type           VARCHAR(100)
                             , start_date DATE
-                            , latitude     DECIMAL(10, 8)
-                            , longitude     DECIMAL(11, 8)
                  );
     
 /* Crea tabla super_store_count

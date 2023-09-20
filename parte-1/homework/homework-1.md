@@ -64,4 +64,4 @@
     - Ana Valdez, desde 2020-02-21 hasta 2022-03-01, España, Madrid, tienda 8, Jefe Logistica
     - Fernando Moralez, 2022-04-04, España, Valencia, tienda 9, Vendedor.
 8. Crear un backup de la tabla `stg.cost` agregandole una columna que se llame `last_updated_ts`que sea el momento exacto en el cual estemos realizando el backup en formato datetime.
-9. En caso de hacer un cambio que deba revertirse en la tabla `order_line_sale` y debemos volver la tabla a su estado original, como lo harias?
+9. En caso de hacer un cambio que deba revertirse en la tabla order_line_sale y debemos volver la tabla a su estado original, como lo harias? Responder con palabras que sentencia utilizarias. (no hace falta usar codigo)
